@@ -11,3 +11,11 @@ func _on_quit_pressed():
 
 func _on_direction_pressed():
 	get_tree().change_scene_to_file("res://scenes/directions.tscn")
+
+
+func _on_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func _on_directions_pressed() -> void:
+	pass # Replace with function body.

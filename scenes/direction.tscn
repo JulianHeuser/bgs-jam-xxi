@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgspwpie0ng48"]
+
+[ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_0hfpj"]
+
+[node name="Directions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0hfpj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 642.0
+color = Color(0.19806686, 0.39152578, 0.49798888, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 336.0
+offset_right = 1044.0
+offset_bottom = 642.0
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Back to Menu"
+
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]

@@ -1,39 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgspwpie0ng48"]
+[gd_scene load_steps=3 format=3 uid="uid://bsc1u088oe218"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_c2u1v"]
+[ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="2_yjkok"]
 
-[node name="Options" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Options" type="Node2D"]
 script = ExtResource("1_c2u1v")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1149.0
-offset_bottom = 642.0
-color = Color(0.19806686, 0.39152578, 0.49798888, 1)
+offset_right = 1147.0
+offset_bottom = 646.0
+color = Color(0.17182475, 0.26981017, 0.2249718, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 101.0
-offset_top = 336.0
-offset_right = 1044.0
-offset_bottom = 642.0
+offset_top = 399.0
+offset_right = 1149.0
+offset_bottom = 644.0
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Volumes" type="Button" parent="VBoxContainer"]
+[node name="Volume" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Volumes"
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 75
+text = "Volume"
 
-[node name="Direction" type="Button" parent="VBoxContainer"]
+[node name="Directions" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 75
 text = "Directions"
 
-[connection signal="pressed" from="VBoxContainer/Direction" to="." method="_on_direction_pressed"]
+[node name="Label" type="Label" parent="."]
+offset_left = -3.0
+offset_top = 162.0
+offset_right = 1145.0
+offset_bottom = 234.0
+theme_override_fonts/font = ExtResource("2_yjkok")
+theme_override_font_sizes/font_size = 175
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Directions" to="." method="_on_directions_pressed"]

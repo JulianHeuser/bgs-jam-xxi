@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvmt4ppfunoyf"]
+[gd_scene load_steps=3 format=3 uid="uid://bvmt4ppfunoyf"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_yqeox"]
+[ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="2_vjb58"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -16,6 +17,25 @@ layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 650.0
 color = Color(0.68161064, 0.39272875, 0.09787881, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -955.0
+offset_top = -466.5
+offset_right = 192.0
+offset_bottom = -398.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vjb58")
+theme_override_font_sizes/font_size = 75
+text = "The Murder of Brian White"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
