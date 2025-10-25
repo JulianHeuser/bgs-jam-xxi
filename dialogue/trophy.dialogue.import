@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bh80nt22cvfb2"
+path="res://.godot/imported/trophy.dialogue-2816513e647bb320700b792826e2350b.tres"
+
+[deps]
+
+source_file="res://dialogue/trophy.dialogue"
+dest_files=["res://.godot/imported/trophy.dialogue-2816513e647bb320700b792826e2350b.tres"]
+
+[params]
+
+defaults=true

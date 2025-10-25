@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://h036o3hfg0l6"
+path="res://.godot/imported/waltblackphoto.dialogue-8f175725522eebcd27ef8d2b5b7be162.tres"
+
+[deps]
+
+source_file="res://dialogue/waltblackphoto.dialogue"
+dest_files=["res://.godot/imported/waltblackphoto.dialogue-8f175725522eebcd27ef8d2b5b7be162.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dft3prcliewp8"
+path="res://.godot/imported/bluecrystal.dialogue-c976eb1cfb67fb3fa3ec379c02f1a636.tres"
+
+[deps]
+
+source_file="res://dialogue/bluecrystal.dialogue"
+dest_files=["res://.godot/imported/bluecrystal.dialogue-c976eb1cfb67fb3fa3ec379c02f1a636.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cv6ap13wbk06m"
+path="res://.godot/imported/yellowcrystal.dialogue-2db82465a57d6cc84e9e615208fd00e9.tres"
+
+[deps]
+
+source_file="res://dialogue/yellowcrystal.dialogue"
+dest_files=["res://.godot/imported/yellowcrystal.dialogue-2db82465a57d6cc84e9e615208fd00e9.tres"]
+
+[params]
+
+defaults=true
