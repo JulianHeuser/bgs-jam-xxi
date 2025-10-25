@@ -157,6 +157,16 @@ item_name = "Mattress"
 position = Vector2(-50.14795, 36)
 shape = SubResource("RectangleShape2D_bd3ru")
 
+[node name="Cauldron" parent="." instance=ExtResource("1_2f21x")]
+position = Vector2(75, 952)
+scale = Vector2(1.017, 1)
+texture = SubResource("PlaceholderTexture2D_cs7aj")
+dialogue = ExtResource("17_bd3ru")
+
+[node name="CollisionShape2D" parent="Cauldron/StaticBody2D" index="0"]
+position = Vector2(-50.14795, 36)
+shape = SubResource("RectangleShape2D_bd3ru")
+
 [editable path="Surfboard"]
 [editable path="Book"]
 [editable path="Trophy"]
@@ -167,3 +177,4 @@ shape = SubResource("RectangleShape2D_bd3ru")
 [editable path="BloodStain"]
 [editable path="WallCrack"]
 [editable path="Mattress"]
+[editable path="Cauldron"]

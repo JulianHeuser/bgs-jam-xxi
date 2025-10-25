@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bq3xb00pvroaf"
+path="res://.godot/imported/cauldron.dialogue-cbfd814c72fdaacff7053c290e9f7fef.tres"
+
+[deps]
+
+source_file="res://dialogue/cauldron.dialogue"
+dest_files=["res://.godot/imported/cauldron.dialogue-cbfd814c72fdaacff7053c290e9f7fef.tres"]
+
+[params]
+
+defaults=true
