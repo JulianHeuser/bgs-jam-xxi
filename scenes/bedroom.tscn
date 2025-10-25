@@ -107,7 +107,7 @@ position = Vector2(1016.0001, 1004)
 scale = Vector2(1.017, 1)
 texture = ExtResource("11_cixf6")
 dialogue = ExtResource("11_mk2nf")
-item_name = "Red Crsytal"
+item_name = "Red Crystal"
 
 [node name="CollisionShape2D" parent="RedCrystal/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
