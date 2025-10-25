@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=28 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
@@ -21,6 +21,7 @@
 [ext_resource type="Resource" uid="uid://5vilqad8uj3" path="res://dialogue/mattress.dialogue" id="17_bd3ru"]
 [ext_resource type="Texture2D" uid="uid://3cpqkbyprx45" path="res://Images/Blood.png" id="17_wlwc7"]
 [ext_resource type="Texture2D" uid="uid://ceoj71lx73dxk" path="res://Images/Cauldron.png" id="21_0wemr"]
+[ext_resource type="Resource" uid="uid://bq3xb00pvroaf" path="res://dialogue/cauldron.dialogue" id="22_0wemr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]
 size = Vector2(120.616196, 94)
@@ -149,6 +150,7 @@ position = Vector2(-50.14795, 36)
 shape = SubResource("RectangleShape2D_bd3ru")
 
 [node name="Mattress" parent="." instance=ExtResource("1_2f21x")]
+visible = false
 position = Vector2(75, 952)
 scale = Vector2(1.017, 1)
 texture = SubResource("PlaceholderTexture2D_cs7aj")
@@ -160,10 +162,10 @@ position = Vector2(-50.14795, 36)
 shape = SubResource("RectangleShape2D_bd3ru")
 
 [node name="Cauldron" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(75, 952)
+position = Vector2(88, 570)
 scale = Vector2(1.017, 1)
 texture = ExtResource("21_0wemr")
-dialogue = ExtResource("17_bd3ru")
+dialogue = ExtResource("22_0wemr")
 
 [node name="CollisionShape2D" parent="Cauldron/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
