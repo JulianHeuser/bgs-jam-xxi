@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://xdcajk71vvh2"]
+
+[ext_resource type="Script" uid="uid://bwiw28svcas5n" path="res://mouse.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://ylq8hp6b1bux" path="res://interaction components/interacting_componet.tscn" id="2_g2els"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_3vyb7")
+
+[node name="InteractingComponet" parent="." instance=ExtResource("2_g2els")]
