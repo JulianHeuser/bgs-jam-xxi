@@ -1,3 +1,7 @@
 ~ start
 Brian White: "red crustal"
+- Yes
+	Brian White: You have kept this item
+- No
+	Brian White: You have not kept this item
 => END

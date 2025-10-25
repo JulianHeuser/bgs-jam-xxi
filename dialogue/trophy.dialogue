@@ -1,3 +1,7 @@
 ~ start
 Brian White: "A second place trophy for the National Crystal Competition. I came in second to Walt Black. It was the first time I lost."
+- Yes
+	Brian White: You have kept this item
+- No
+	Brian White: You have not kept this item
 => END
