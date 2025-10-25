@@ -1,12 +1,16 @@
 class_name Clicker extends Sprite2D
 
+@onready var UI : UIManager = $"../%UI"
+
 @export var dialogue : DialogueResource
 @export var item_name : String
 var interactable = true
 
 static var selected_items : Array[String]
+static var num_of_items : int = 0
 
 func _ready() -> void:
+	selected_items.resize(3)
 	DialogueManager.dialogue_started.connect(
 		func(_resource: DialogueResource): interactable = false
 	)
@@ -21,4 +25,13 @@ func _input(event: InputEvent) -> void:
 				DialogueManager.show_dialogue_balloon(dialogue,"start", [self])
 
 func add_item_to_clues() -> void:
-	print("ADDED THE THING!")
+	if item_name in selected_items:
+		# Item already selected
+		return
+	selected_items[num_of_items] = item_name
+	UI.set_texture(num_of_items, texture)
+	
+	num_of_items += 1
+	
+	if num_of_items == 3:
+		print("Wow you did it awesome")

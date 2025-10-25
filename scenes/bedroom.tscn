@@ -1,7 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=25 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
+[ext_resource type="PackedScene" uid="uid://bgsuauel8r4k5" path="res://UI.tscn" id="2_43jao"]
 [ext_resource type="Texture2D" uid="uid://xdan3j7qvc3r" path="res://Images/Surfboard.png" id="2_mkmp1"]
 [ext_resource type="Texture2D" uid="uid://ybn0bwbkwd1y" path="res://Images/CrystalBook.png" id="3_7lolw"]
 [ext_resource type="Resource" uid="uid://bt48i1ih4uxmk" path="res://dialogue/book.dialogue" id="4_pwtdf"]
@@ -39,6 +40,14 @@ size = Vector2(256, 256)
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 texture = ExtResource("1_cs7aj")
+
+[node name="UI" parent="Background" instance=ExtResource("2_43jao")]
+unique_name_in_owner = true
+anchors_preset = -1
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
 
 [node name="Surfboard" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1410, 806)
