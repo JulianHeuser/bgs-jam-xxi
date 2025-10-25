@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://drpwp3ibnedsg"
+path="res://.godot/imported/writing'.dialogue-c81436dd8469bfdeefb1048a3428ce8f.tres"
+
+[deps]
+
+source_file="res://writing'.dialogue"
+dest_files=["res://.godot/imported/writing'.dialogue-c81436dd8469bfdeefb1048a3428ce8f.tres"]
+
+[params]
+
+defaults=true
