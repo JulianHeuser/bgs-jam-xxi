@@ -3,6 +3,7 @@ Brian White: "yellow crustal"
 Brian White: Do You Want To KEEP this Item
 - Yes
 	Brian White: You have kept this item
+	do add_item_to_clues()
 - No
 	Brian White: You have not kept this item
 => END

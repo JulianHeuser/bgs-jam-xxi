@@ -1,3 +1,8 @@
 ~ start
 Brian White: "A dingy mattress."
+- Yes
+	Brian White: You have kept this item
+	do add_item_to_clues()
+- No
+	Brian White: You have not kept this item
 => END

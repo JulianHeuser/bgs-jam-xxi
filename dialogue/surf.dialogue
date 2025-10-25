@@ -2,6 +2,7 @@
 Brian White: "I always wanted to learn to surf. It was my greatest desire, but I had to focus on my career."
 - Yes
 	Brian White: You have kept this item
+	do add_item_to_clues()
 - No
 	Brian White: You have not kept this item
 => END
