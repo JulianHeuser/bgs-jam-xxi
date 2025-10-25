@@ -10,7 +10,7 @@ func _on_quit_pressed():
 
 
 func _on_direction_pressed():
-	get_tree().change_scene_to_file("res://scenes/directions.tscn")
+	get_tree().change_scene_to_file("res://scenes/direction.tscn")
 
 
 func _on_menu_pressed() -> void:
