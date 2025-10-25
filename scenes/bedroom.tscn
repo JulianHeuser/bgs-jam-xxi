@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=23 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://xdan3j7qvc3r" path="res://Images/Surfboard.png" id="2_mkmp1"]
@@ -10,8 +10,13 @@
 [ext_resource type="Resource" uid="uid://dft3prcliewp8" path="res://dialogue/bluecrystal.dialogue" id="8_lv7wv"]
 [ext_resource type="Texture2D" uid="uid://5bep5q3h68yo" path="res://Images/CrystalYellow.png" id="9_k5fq4"]
 [ext_resource type="Resource" uid="uid://cv6ap13wbk06m" path="res://dialogue/yellowcrystal.dialogue" id="10_4wfg3"]
+[ext_resource type="Texture2D" uid="uid://wbp4v3gdk4jv" path="res://Images/CrystalRed.png" id="11_cixf6"]
 [ext_resource type="Resource" uid="uid://2t23bflei1h6" path="res://dialogue/redcrystal.dialogue" id="11_mk2nf"]
 [ext_resource type="Resource" uid="uid://h036o3hfg0l6" path="res://dialogue/waltblackphoto.dialogue" id="12_lv7wv"]
+[ext_resource type="Texture2D" uid="uid://cgrtmdkjyvesk" path="res://Images/Picture.png" id="13_bd3ru"]
+[ext_resource type="Resource" uid="uid://dc1toe5f1w2r8" path="res://dialogue/bloodstain.dialogue" id="13_k5fq4"]
+[ext_resource type="Resource" uid="uid://x5lxag33bm86" path="res://dialogue/wallcrack.dialogue" id="14_4wfg3"]
+[ext_resource type="Resource" uid="uid://5vilqad8uj3" path="res://dialogue/mattress.dialogue" id="17_bd3ru"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]
 size = Vector2(120.616196, 94)
@@ -79,10 +84,9 @@ position = Vector2(-7.866501, 14)
 shape = SubResource("RectangleShape2D_bd3ru")
 
 [node name="RedCrystal" parent="." instance=ExtResource("1_2f21x")]
-visible = false
-position = Vector2(1157, 261)
+position = Vector2(1016.0001, 1004)
 scale = Vector2(1.017, 1)
-texture = null
+texture = ExtResource("11_cixf6")
 dialogue = ExtResource("11_mk2nf")
 
 [node name="CollisionShape2D" parent="RedCrystal/StaticBody2D" index="0"]
@@ -90,22 +94,42 @@ position = Vector2(-50.14795, 36)
 shape = SubResource("RectangleShape2D_bd3ru")
 
 [node name="WaltBlackPhoto" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(1038, 76)
+position = Vector2(1038, 78)
 scale = Vector2(1.017, 1)
-texture = SubResource("PlaceholderTexture2D_cs7aj")
+texture = ExtResource("13_bd3ru")
 dialogue = ExtResource("12_lv7wv")
 
 [node name="CollisionShape2D" parent="WaltBlackPhoto/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
 shape = SubResource("RectangleShape2D_bd3ru")
 
-[node name="WaltBlackPhoto2" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(1066, 998)
+[node name="BloodStain" parent="." instance=ExtResource("1_2f21x")]
+position = Vector2(1660, 207)
 scale = Vector2(1.017, 1)
 texture = SubResource("PlaceholderTexture2D_cs7aj")
-dialogue = ExtResource("12_lv7wv")
+dialogue = ExtResource("13_k5fq4")
 
-[node name="CollisionShape2D" parent="WaltBlackPhoto2/StaticBody2D" index="0"]
+[node name="CollisionShape2D" parent="BloodStain/StaticBody2D" index="0"]
+position = Vector2(-50.14795, 36)
+shape = SubResource("RectangleShape2D_bd3ru")
+
+[node name="WallCrack" parent="." instance=ExtResource("1_2f21x")]
+position = Vector2(1823, 749)
+scale = Vector2(1.017, 1)
+texture = SubResource("PlaceholderTexture2D_cs7aj")
+dialogue = ExtResource("14_4wfg3")
+
+[node name="CollisionShape2D" parent="WallCrack/StaticBody2D" index="0"]
+position = Vector2(-50.14795, 36)
+shape = SubResource("RectangleShape2D_bd3ru")
+
+[node name="Mattress" parent="." instance=ExtResource("1_2f21x")]
+position = Vector2(75, 952)
+scale = Vector2(1.017, 1)
+texture = SubResource("PlaceholderTexture2D_cs7aj")
+dialogue = ExtResource("17_bd3ru")
+
+[node name="CollisionShape2D" parent="Mattress/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
 shape = SubResource("RectangleShape2D_bd3ru")
 
@@ -116,4 +140,6 @@ shape = SubResource("RectangleShape2D_bd3ru")
 [editable path="YellowCrystal"]
 [editable path="RedCrystal"]
 [editable path="WaltBlackPhoto"]
-[editable path="WaltBlackPhoto2"]
+[editable path="BloodStain"]
+[editable path="WallCrack"]
+[editable path="Mattress"]

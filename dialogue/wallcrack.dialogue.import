@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://x5lxag33bm86"
+path="res://.godot/imported/wallcrack.dialogue-bec054d90ee25b0a2cc0e2eddd98de07.tres"
+
+[deps]
+
+source_file="res://dialogue/wallcrack.dialogue"
+dest_files=["res://.godot/imported/wallcrack.dialogue-bec054d90ee25b0a2cc0e2eddd98de07.tres"]
+
+[params]
+
+defaults=true

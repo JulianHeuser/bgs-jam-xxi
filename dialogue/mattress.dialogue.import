@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://5vilqad8uj3"
+path="res://.godot/imported/mattress.dialogue-299dfeed89455a67fe6842e1d6c0ca17.tres"
+
+[deps]
+
+source_file="res://dialogue/mattress.dialogue"
+dest_files=["res://.godot/imported/mattress.dialogue-299dfeed89455a67fe6842e1d6c0ca17.tres"]
+
+[params]
+
+defaults=true
