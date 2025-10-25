@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://qjd1705fkqqk"]
+[gd_scene load_steps=4 format=3 uid="uid://cwln11qqvqhoa"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_826fv"]
 [ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="1_r4oei"]
+[ext_resource type="Texture2D" uid="uid://b4hbnykae1his" path="res://Images/WINNER.png" id="2_iiocm"]
 
 [node name="WIN" type="Control"]
 layout_mode = 3
@@ -12,11 +13,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_826fv")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1911.0
-offset_bottom = 1068.0
-color = Color(0.21694544, 0.2825905, 0.25248757, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iiocm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

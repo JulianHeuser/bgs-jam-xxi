@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d26ya0mhvq5xn"]
+[gd_scene load_steps=4 format=3 uid="uid://ctw0pgokiv4lk"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_r6nsb"]
 [ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="1_vjdtf"]
+[ext_resource type="Texture2D" uid="uid://qb3ybqkbu6nu" path="res://Images/LOSER.png" id="2_10rtl"]
 
 [node name="LOSE" type="Control"]
 layout_mode = 3
@@ -12,11 +13,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_r6nsb")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1908.0
-offset_bottom = 1074.0
-color = Color(0.65386134, 0.24151781, 0.47509074, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_10rtl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -46,3 +50,5 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_vjdtf")
 theme_override_font_sizes/font_size = 100
 text = "Solve Again"
+
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_play_pressed"]

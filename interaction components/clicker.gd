@@ -44,3 +44,6 @@ func add_item_to_clues() -> void:
 			"Red Crystal" in selected_items:
 				get_tree().change_scene_to_file("res://scenes/win.tscn")
 		else: get_tree().change_scene_to_file("res://scenes/lose.tscn")
+		
+		selected_items = ["", "", ""]
+		num_of_items = 0
