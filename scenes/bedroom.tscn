@@ -39,6 +39,7 @@ size = Vector2(256, 256)
 position = Vector2(1410, 806)
 scale = Vector2(1, 0.983)
 texture = ExtResource("2_mkmp1")
+item_name = "SurfBoard"
 
 [node name="CollisionShape2D" parent="Surfboard/StaticBody2D" index="0"]
 position = Vector2(-7, 5.086426)
@@ -48,6 +49,7 @@ position = Vector2(184.99997, 243)
 scale = Vector2(0.52217185, 0.51344335)
 texture = ExtResource("3_7lolw")
 dialogue = ExtResource("4_pwtdf")
+item_name = "Book"
 
 [node name="CollisionShape2D" parent="Book/StaticBody2D" index="0"]
 position = Vector2(-23.598816, 162)
@@ -58,6 +60,7 @@ position = Vector2(412, 257)
 scale = Vector2(0.49482805, 0.4865566)
 texture = ExtResource("5_7lolw")
 dialogue = ExtResource("6_pwtdf")
+item_name = "Trophy"
 
 [node name="CollisionShape2D" parent="Trophy/StaticBody2D" index="0"]
 position = Vector2(-2.9499512, 71.85217)
@@ -68,6 +71,7 @@ position = Vector2(496.00003, 780)
 scale = Vector2(1.017, 1)
 texture = ExtResource("7_lj4hb")
 dialogue = ExtResource("8_lv7wv")
+item_name = "Blue Crystal"
 
 [node name="CollisionShape2D" parent="BlueCrystal/StaticBody2D" index="0"]
 position = Vector2(-47.197693, 25)
@@ -78,6 +82,7 @@ position = Vector2(983.0001, 602)
 scale = Vector2(1.017, 1)
 texture = ExtResource("9_k5fq4")
 dialogue = ExtResource("10_4wfg3")
+item_name = "Yellow Crystal"
 
 [node name="CollisionShape2D" parent="YellowCrystal/StaticBody2D" index="0"]
 position = Vector2(-7.866501, 14)
@@ -88,6 +93,7 @@ position = Vector2(1016.0001, 1004)
 scale = Vector2(1.017, 1)
 texture = ExtResource("11_cixf6")
 dialogue = ExtResource("11_mk2nf")
+item_name = "Red Crsytal"
 
 [node name="CollisionShape2D" parent="RedCrystal/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
@@ -98,6 +104,7 @@ position = Vector2(1038, 78)
 scale = Vector2(1.017, 1)
 texture = ExtResource("13_bd3ru")
 dialogue = ExtResource("12_lv7wv")
+item_name = "Walt Black Photo"
 
 [node name="CollisionShape2D" parent="WaltBlackPhoto/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
@@ -108,6 +115,7 @@ position = Vector2(1660, 207)
 scale = Vector2(1.017, 1)
 texture = SubResource("PlaceholderTexture2D_cs7aj")
 dialogue = ExtResource("13_k5fq4")
+item_name = "Blood Stain"
 
 [node name="CollisionShape2D" parent="BloodStain/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
@@ -118,6 +126,7 @@ position = Vector2(1823, 749)
 scale = Vector2(1.017, 1)
 texture = SubResource("PlaceholderTexture2D_cs7aj")
 dialogue = ExtResource("14_4wfg3")
+item_name = "Wall Crack"
 
 [node name="CollisionShape2D" parent="WallCrack/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
@@ -128,6 +137,7 @@ position = Vector2(75, 952)
 scale = Vector2(1.017, 1)
 texture = SubResource("PlaceholderTexture2D_cs7aj")
 dialogue = ExtResource("17_bd3ru")
+item_name = "Mattress"
 
 [node name="CollisionShape2D" parent="Mattress/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
