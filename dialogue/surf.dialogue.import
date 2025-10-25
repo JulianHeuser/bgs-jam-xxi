@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://drpwp3ibnedsg"
+path="res://.godot/imported/surf.dialogue-f965a8ff61c35384b2772c143730a5f8.tres"
+
+[deps]
+
+source_file="res://dialogue/surf.dialogue"
+dest_files=["res://.godot/imported/surf.dialogue-f965a8ff61c35384b2772c143730a5f8.tres"]
+
+[params]
+
+defaults=true
