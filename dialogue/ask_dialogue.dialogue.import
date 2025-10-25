@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://tnbrtptkduk1"
+path="res://.godot/imported/ask_dialogue.dialogue-03f93e4ad3a8f0295661e423c4a6be65.tres"
+
+[deps]
+
+source_file="res://dialogue/ask_dialogue.dialogue"
+dest_files=["res://.godot/imported/ask_dialogue.dialogue-03f93e4ad3a8f0295661e423c4a6be65.tres"]
+
+[params]
+
+defaults=true

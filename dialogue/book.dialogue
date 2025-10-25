@@ -1,8 +1,3 @@
 ~ start
 Brian White: "A guide book on crystal types. An entry says 'Red Crystals: curses the user to die of their greatest desire.'"
-- Yes
-	Brian White: You have kept this item
-	do add_item_to_clues()
-- No
-	Brian White: You have not kept this item
 => END

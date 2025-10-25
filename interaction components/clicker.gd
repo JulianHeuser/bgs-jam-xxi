@@ -6,6 +6,8 @@ class_name Clicker extends Sprite2D
 @export var item_name : String
 var interactable = true
 
+@onready var ask_dialogue : DialogueResource = preload("res://dialogue/ask_dialogue.dialogue")
+
 static var selected_items : Array[String]
 static var num_of_items : int = 0
 
@@ -23,6 +25,8 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if is_pixel_opaque(get_local_mouse_position()):
 				DialogueManager.show_dialogue_balloon(dialogue,"start", [self])
+				await DialogueManager.dialogue_ended
+				DialogueManager.show_dialogue_balloon(ask_dialogue,"start", [self])
 
 func add_item_to_clues() -> void:
 	if item_name in selected_items:
@@ -35,3 +39,8 @@ func add_item_to_clues() -> void:
 	
 	if num_of_items == 3:
 		print("Wow you did it awesome")
+		if "SurfBoard" in selected_items and \
+			"Trophy" in selected_items and \
+			"Red Crystal" in selected_items:
+				get_tree().change_scene_to_file("res://scenes/win.tscn")
+		else: get_tree().change_scene_to_file("res://scenes/lose.tscn")
