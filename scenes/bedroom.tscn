@@ -1,8 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=27 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
-[ext_resource type="PackedScene" uid="uid://bgsuauel8r4k5" path="res://UI.tscn" id="2_43jao"]
+[ext_resource type="PackedScene" path="res://UI.tscn" id="2_43jao"]
 [ext_resource type="Texture2D" uid="uid://xdan3j7qvc3r" path="res://Images/Surfboard.png" id="2_mkmp1"]
 [ext_resource type="Texture2D" uid="uid://ybn0bwbkwd1y" path="res://Images/CrystalBook.png" id="3_7lolw"]
 [ext_resource type="Resource" uid="uid://bt48i1ih4uxmk" path="res://dialogue/book.dialogue" id="4_pwtdf"]
@@ -19,6 +19,8 @@
 [ext_resource type="Resource" uid="uid://dc1toe5f1w2r8" path="res://dialogue/bloodstain.dialogue" id="13_k5fq4"]
 [ext_resource type="Resource" uid="uid://x5lxag33bm86" path="res://dialogue/wallcrack.dialogue" id="14_4wfg3"]
 [ext_resource type="Resource" uid="uid://5vilqad8uj3" path="res://dialogue/mattress.dialogue" id="17_bd3ru"]
+[ext_resource type="Texture2D" uid="uid://3cpqkbyprx45" path="res://Images/Blood.png" id="17_wlwc7"]
+[ext_resource type="Texture2D" uid="uid://ceoj71lx73dxk" path="res://Images/Cauldron.png" id="21_0wemr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]
 size = Vector2(120.616196, 94)
@@ -127,7 +129,7 @@ shape = SubResource("RectangleShape2D_bd3ru")
 [node name="BloodStain" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1660, 207)
 scale = Vector2(1.017, 1)
-texture = SubResource("PlaceholderTexture2D_cs7aj")
+texture = ExtResource("17_wlwc7")
 dialogue = ExtResource("13_k5fq4")
 item_name = "Blood Stain"
 
@@ -160,7 +162,7 @@ shape = SubResource("RectangleShape2D_bd3ru")
 [node name="Cauldron" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(75, 952)
 scale = Vector2(1.017, 1)
-texture = SubResource("PlaceholderTexture2D_cs7aj")
+texture = ExtResource("21_0wemr")
 dialogue = ExtResource("17_bd3ru")
 
 [node name="CollisionShape2D" parent="Cauldron/StaticBody2D" index="0"]
