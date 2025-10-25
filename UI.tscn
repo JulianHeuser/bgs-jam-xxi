@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgsuauel8r4k5"]
 
-[ext_resource type="Script" uid="uid://c5koc2kkbft4j" path="res://scripts/UIManager.gd" id="1_3b2b5"]
+[ext_resource type="Script" path="res://scripts/UIManager.gd" id="1_3b2b5"]
 [ext_resource type="Texture2D" uid="uid://0i5c44lbvqpg" path="res://icon.svg" id="1_b3bc3"]
 
 [node name="Control" type="Control" node_paths=PackedStringArray("textures")]
@@ -16,11 +16,12 @@ textures = [NodePath("HBoxContainer/TextureRect"), NodePath("HBoxContainer/Textu
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 0.88100004
+anchor_right = 0.231
 anchor_bottom = 1.0
-offset_top = -128.0
-offset_right = 424.0
+offset_top = 0.5199585
+offset_right = -19.52002
 grow_vertical = 0
 theme_override_constants/separation = 20
 alignment = 1
