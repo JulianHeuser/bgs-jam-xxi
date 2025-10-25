@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=12 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
+[ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="2_1337t"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Theme" uid="uid://sbrhwfe6lcck" path="res://UI.tres" id="3_nlsx6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.42745098, 0.23921569, 0.078431375, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -29,7 +31,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.42745098, 0.23921569, 0.078431375, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -63,6 +65,18 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlsx6"]
+bg_color = Color(0.42745098, 0.23921569, 0.078431375, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_36de5")
@@ -70,11 +84,8 @@ script = ExtResource("1_36de5")
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 theme = SubResource("Theme_qq3yp")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon"]
@@ -88,9 +99,11 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer"]
+modulate = Color(0.71838135, 0.71838135, 0.71838135, 1)
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_nlsx6")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer"]
 layout_mode = 2
@@ -103,6 +116,8 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("2_1337t")
+theme_override_font_sizes/normal_font_size = 35
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -112,10 +127,13 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("2_1337t")
+theme_override_font_sizes/normal_font_size = 45
 text = "Dialogue..."
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
+modulate = Color(0.6706895, 0.6706895, 0.6706895, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -129,6 +147,7 @@ offset_bottom = 411.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
+theme = ExtResource("3_nlsx6")
 theme_override_constants/separation = 2
 alignment = 1
 script = ExtResource("3_72ixx")
@@ -136,6 +155,8 @@ response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1337t")
+theme_override_font_sizes/font_size = 45
 text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
