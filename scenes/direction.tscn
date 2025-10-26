@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgspwpie0ng48"]
+[gd_scene load_steps=4 format=3 uid="uid://cgspwpie0ng48"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_0hfpj"]
+[ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="2_htb4o"]
+[ext_resource type="Texture2D" uid="uid://6t7pumygcwa" path="res://Images/pumpkins/squash.png" id="3_wnqkx"]
 
 [node name="Directions" type="Control"]
 layout_mode = 3
@@ -37,7 +39,30 @@ alignment = 1
 
 [node name="Menu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("2_htb4o")
+theme_override_font_sizes/font_size = 109
 text = "Back to Menu"
+
+[node name="Label" type="Label" parent="VBoxContainer/Menu"]
+layout_mode = 0
+offset_left = -1665.5
+offset_top = -769.0
+offset_right = 2654.5
+offset_bottom = -58.0
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("2_htb4o")
+theme_override_font_sizes/font_size = 100
+text = "Click to select an item. It will give you a short 
+description/hint. Select if you believe the item was the means, 
+motive, or weapon for the murder. If you select an option but 
+you'd like to change it, you may change your option. "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Squash" type="Sprite2D" parent="."]
+position = Vector2(233, 823)
+scale = Vector2(0.84375, 0.83203125)
+texture = ExtResource("3_wnqkx")
 
 [connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
