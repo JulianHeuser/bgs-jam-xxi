@@ -1,8 +1,8 @@
 ~ start
-Brian White: Do You Want To KEEP this Item
+Brian White: Do You Want To KEEP this Item?
 - Yes
-	Brian White: You have kept this item
+	Brian White: You have kept this item.
 	do add_item_to_clues()
 - No
-	Brian White: You have not kept this item
+	Brian White: You have not kept this item.
 => END
