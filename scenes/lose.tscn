@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctw0pgokiv4lk"]
+[gd_scene load_steps=7 format=3 uid="uid://ctw0pgokiv4lk"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_r6nsb"]
 [ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="1_vjdtf"]
 [ext_resource type="Texture2D" uid="uid://qb3ybqkbu6nu" path="res://Images/LOSER.png" id="2_10rtl"]
 [ext_resource type="AudioStream" uid="uid://v3vfavy6q15m" path="res://sounds/lose.wav" id="4_h0cgr"]
+[ext_resource type="Texture2D" uid="uid://3cpqkbyprx45" path="res://Images/Blood.png" id="5_alj87"]
+[ext_resource type="Texture2D" uid="uid://c5av6ky7o3aip" path="res://Images/Lightbulb.png" id="6_r44po"]
 
 [node name="LOSE" type="Control"]
 layout_mode = 3
@@ -55,6 +57,14 @@ text = "Solve Again"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_h0cgr")
 autoplay = true
-bus = &"Music"
+
+[node name="Blood" type="Sprite2D" parent="."]
+position = Vector2(951, 838.99994)
+scale = Vector2(1.5878906, 1.2519531)
+texture = ExtResource("5_alj87")
+
+[node name="Lightbulb" type="Sprite2D" parent="."]
+position = Vector2(763, 812)
+texture = ExtResource("6_r44po")
 
 [connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_play_pressed"]

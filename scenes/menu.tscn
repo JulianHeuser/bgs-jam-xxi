@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bvmt4ppfunoyf"]
+[gd_scene load_steps=14 format=3 uid="uid://bvmt4ppfunoyf"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://cgjxlxy4mphcs" path="res://Images/pumpkins/StartScreen.png" id="2_mj5lg"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dwtjmit3ifjro" path="res://Images/pumpkins/pumpkin3.png" id="8_7jp70"]
 [ext_resource type="Texture2D" uid="uid://ceyqp1jo054dg" path="res://Images/pumpkins/vine4.png" id="9_mxgkd"]
 [ext_resource type="Texture2D" uid="uid://d4ehqjare5te4" path="res://Images/pumpkins/vine2.png" id="10_g6gyw"]
+[ext_resource type="Texture2D" uid="uid://ceoj71lx73dxk" path="res://Images/Cauldron.png" id="12_6cdou"]
+[ext_resource type="Texture2D" uid="uid://bgo8qxtbxsf85" path="res://Images/Crack.png" id="13_i42df"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -71,7 +73,7 @@ theme_override_font_sizes/font_size = 125
 text = "Exit"
 
 [node name="Squash" type="Sprite2D" parent="VBoxContainer2/VBoxContainer"]
-position = Vector2(721, 362.5)
+position = Vector2(-648, 367.5)
 scale = Vector2(0.6660157, 0.7480469)
 texture = ExtResource("3_70i5f")
 
@@ -108,6 +110,16 @@ texture = ExtResource("9_mxgkd")
 position = Vector2(1119.0001, 709)
 scale = Vector2(1.7421875, 2.4652777)
 texture = ExtResource("10_g6gyw")
+
+[node name="Cauldron" type="Sprite2D" parent="."]
+position = Vector2(1547, 807)
+texture = ExtResource("12_6cdou")
+
+[node name="Crack" type="Sprite2D" parent="."]
+position = Vector2(1420, 543)
+rotation = 1.6144296
+scale = Vector2(0.6972091, 0.7228762)
+texture = ExtResource("13_i42df")
 
 [connection signal="pressed" from="VBoxContainer2/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer2/VBoxContainer/Options" to="." method="_on_options_pressed"]

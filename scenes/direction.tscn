@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgspwpie0ng48"]
+[gd_scene load_steps=7 format=3 uid="uid://cgspwpie0ng48"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_0hfpj"]
 [ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="2_htb4o"]
-[ext_resource type="Texture2D" uid="uid://6t7pumygcwa" path="res://Images/pumpkins/squash.png" id="3_wnqkx"]
+[ext_resource type="Texture2D" uid="uid://bpnovbxkbuhbx" path="res://Images/pumpkins/pumpkin4.png" id="3_2u8mh"]
+[ext_resource type="Texture2D" uid="uid://wbp4v3gdk4jv" path="res://Images/CrystalRed.png" id="4_ousic"]
+[ext_resource type="Texture2D" uid="uid://bgo8qxtbxsf85" path="res://Images/Crack.png" id="5_djo8p"]
+[ext_resource type="Texture2D" uid="uid://ybn0bwbkwd1y" path="res://Images/CrystalBook.png" id="6_dycrt"]
 
 [node name="Directions" type="Control"]
 layout_mode = 3
@@ -20,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.19806686, 0.39152578, 0.49798888, 1)
+color = Color(0.33348072, 0.38583648, 0.3168892, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -60,9 +63,23 @@ you'd like to change it, you may change your option. "
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Squash" type="Sprite2D" parent="."]
-position = Vector2(233, 823)
-scale = Vector2(0.84375, 0.83203125)
-texture = ExtResource("3_wnqkx")
+[node name="Pumpkin4" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(1195.5, 102)
+texture = ExtResource("3_2u8mh")
+
+[node name="CrystalRed" type="Sprite2D" parent="."]
+position = Vector2(206.99998, 193)
+scale = Vector2(0.5546875, 0.5449219)
+texture = ExtResource("4_ousic")
+
+[node name="Crack" type="Sprite2D" parent="."]
+position = Vector2(1673.0001, 180)
+scale = Vector2(0.8750002, 0.7158204)
+texture = ExtResource("5_djo8p")
+
+[node name="CrystalBook" type="Sprite2D" parent="."]
+position = Vector2(268, 746)
+scale = Vector2(1.0917969, 1.1367188)
+texture = ExtResource("6_dycrt")
 
 [connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
