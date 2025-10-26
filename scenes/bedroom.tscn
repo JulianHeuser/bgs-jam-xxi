@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=51 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
@@ -30,10 +30,10 @@
 [ext_resource type="Texture2D" uid="uid://3cpqkbyprx45" path="res://Images/Blood.png" id="17_wlwc7"]
 [ext_resource type="Texture2D" uid="uid://ceoj71lx73dxk" path="res://Images/Cauldron.png" id="21_0wemr"]
 [ext_resource type="Resource" uid="uid://bq3xb00pvroaf" path="res://dialogue/cauldron.dialogue" id="22_0wemr"]
-[ext_resource type="Texture2D" uid="uid://bgo8qxtbxsf85" path="res://Images/Crack.png" id="22_lwmpn"]
 [ext_resource type="AudioStream" uid="uid://iphpa3h3b2fj" path="res://sounds/werner.wav" id="22_styym"]
 [ext_resource type="Texture2D" uid="uid://dwx6438kcyveb" path="res://Images/Bed.png" id="24_6lafe"]
 [ext_resource type="AudioStream" uid="uid://jyr8duuivinh" path="res://sounds/picture.wav" id="24_iuwyb"]
+[ext_resource type="Texture2D" uid="uid://rqtw7ynqox6l" path="res://Images/New crack.png" id="26_wolxw"]
 [ext_resource type="AudioStream" uid="uid://7ehn2lm8gfjm" path="res://sounds/blood.wav" id="27_yv0u1"]
 [ext_resource type="Texture2D" uid="uid://dw1kna5i3bsp1" path="res://Images/Clock.png" id="28_lwmpn"]
 [ext_resource type="Resource" uid="uid://brndfhwmrpgui" path="res://dialogue/clock.dialogue" id="29_6lafe"]
@@ -44,10 +44,12 @@
 [ext_resource type="AudioStream" uid="uid://j57tnemi50xf" path="res://sounds/Other/cauldron.wav" id="36_wolxw"]
 [ext_resource type="AudioStream" uid="uid://dkfhp4g7xbksi" path="res://sounds/bgs_loop.ogg" id="40_7uc5s"]
 [ext_resource type="Texture2D" uid="uid://c6jyvsyjkf8ih" path="res://Images/Trashcan.png" id="40_iuwyb"]
-[ext_resource type="Script" uid="uid://d3c1c8tm47gqp" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
+[ext_resource type="Script" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
 [ext_resource type="Resource" uid="uid://ccdynrhx050dt" path="res://dialogue/trash.dialogue" id="41_yv0u1"]
 [ext_resource type="AudioStream" uid="uid://bb1dxn7aobvls" path="res://sounds/Other/trash.wav" id="43_6bpri"]
-[ext_resource type="Script" uid="uid://ck1ycnymgw10" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
+[ext_resource type="Script" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
+[ext_resource type="Texture2D" uid="uid://d4ehqjare5te4" path="res://Images/pumpkins/vine2.png" id="49_mn5e5"]
+[ext_resource type="Texture2D" uid="uid://c40l16a50yfvo" path="res://Images/pumpkins/vine1.png" id="50_i3afc"]
 
 [node name="Bedroom" type="Node2D"]
 script = ExtResource("1_u8wxw")
@@ -148,7 +150,7 @@ stream = ExtResource("27_yv0u1")
 [node name="WallCrack" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(679, 344)
 scale = Vector2(0.65, 0.639)
-texture = ExtResource("22_lwmpn")
+texture = ExtResource("26_wolxw")
 dialogue = ExtResource("14_4wfg3")
 item_name = "Wall Crack"
 
@@ -166,10 +168,10 @@ item_name = "Mattress"
 stream = ExtResource("33_styym")
 
 [node name="Surfboard" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(1156, 847.00006)
+position = Vector2(1120, 822)
 rotation = -1.1170107
-scale = Vector2(1.0433319, 1.0255952)
-skew = -0.13439035
+scale = Vector2(0.86732703, 0.85258245)
+skew = 0.06632251
 texture = ExtResource("2_mkmp1")
 item_name = "SurfBoard"
 
@@ -199,10 +201,10 @@ item_name = "clock"
 stream = ExtResource("24_iuwyb")
 
 [node name="Poster" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(1664.979, 457.36514)
+position = Vector2(1666.7941, 464.62512)
 rotation = 0.4834562
-scale = Vector2(0.22119744, 0.3483128)
-skew = -0.5550147
+scale = Vector2(0.21877418, 0.3678099)
+skew = -0.42062435
 texture = ExtResource("30_bwacq")
 dialogue = ExtResource("31_sphvx")
 item_name = "poster"
@@ -230,6 +232,18 @@ script = ExtResource("41_3eg4m")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("45_wltlc")
 intro_dialogue = ExtResource("2_yv0u1")
+
+[node name="Vine2" type="Sprite2D" parent="."]
+position = Vector2(1280.0001, 220)
+rotation = -4.722861
+scale = Vector2(1.0371094, 1.2395834)
+texture = ExtResource("49_mn5e5")
+
+[node name="Vine1" type="Sprite2D" parent="."]
+position = Vector2(1292, 359)
+rotation = -1.5149457
+scale = Vector2(1.546875, 2.09375)
+texture = ExtResource("50_i3afc")
 
 [editable path="Book"]
 [editable path="Trophy"]
