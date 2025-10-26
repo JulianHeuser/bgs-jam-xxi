@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=56 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
@@ -40,7 +40,9 @@
 [ext_resource type="Resource" uid="uid://cihrcq6a7q2s5" path="res://dialogue/poster.dialogue" id="31_sphvx"]
 [ext_resource type="AudioStream" uid="uid://bpnv54mi2fqtf" path="res://sounds/bed.wav" id="33_styym"]
 [ext_resource type="AudioStream" uid="uid://dkfhp4g7xbksi" path="res://sounds/bgs_loop.ogg" id="40_7uc5s"]
-[ext_resource type="Script" uid="uid://d3c1c8tm47gqp" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
+[ext_resource type="Texture2D" uid="uid://c6jyvsyjkf8ih" path="res://Images/Trashcan.png" id="40_iuwyb"]
+[ext_resource type="Script" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
+[ext_resource type="Resource" uid="uid://ccdynrhx050dt" path="res://dialogue/trash.dialogue" id="41_yv0u1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]
 size = Vector2(120.616196, 94)
@@ -74,6 +76,9 @@ size = Vector2(730.9914, 716.77026)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3yip"]
 size = Vector2(374.6087, 205.04507)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wltlc"]
+size = Vector2(114.20326, 115.54579)
 
 [node name="Bedroom" type="Node2D"]
 script = ExtResource("1_u8wxw")
@@ -113,6 +118,7 @@ position = Vector2(-7, 5.086426)
 
 [node name="AudioStreamPlayer" parent="Surfboard" index="1"]
 stream = ExtResource("8_3lri6")
+bus = &"Master"
 
 [node name="Book" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(206.99998, 286)
@@ -127,6 +133,7 @@ shape = SubResource("RectangleShape2D_mkmp1")
 
 [node name="AudioStreamPlayer" parent="Book" index="1"]
 stream = ExtResource("11_7uc5s")
+bus = &"Master"
 
 [node name="Trophy" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(318, 109.000015)
@@ -141,6 +148,7 @@ shape = SubResource("RectangleShape2D_pwtdf")
 
 [node name="AudioStreamPlayer" parent="Trophy" index="1"]
 stream = ExtResource("14_3eg4m")
+bus = &"Master"
 
 [node name="BlueCrystal" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(568, 109)
@@ -155,6 +163,7 @@ shape = SubResource("RectangleShape2D_cixf6")
 
 [node name="AudioStreamPlayer" parent="BlueCrystal" index="1"]
 stream = ExtResource("17_boshx")
+bus = &"Master"
 
 [node name="YellowCrystal" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(877, 112)
@@ -169,6 +178,7 @@ shape = SubResource("RectangleShape2D_bd3ru")
 
 [node name="AudioStreamPlayer" parent="YellowCrystal" index="1"]
 stream = ExtResource("17_boshx")
+bus = &"Master"
 
 [node name="RedCrystal" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(700, 102)
@@ -183,6 +193,7 @@ shape = SubResource("RectangleShape2D_bd3ru")
 
 [node name="AudioStreamPlayer" parent="RedCrystal" index="1"]
 stream = ExtResource("17_boshx")
+bus = &"Master"
 
 [node name="WaltBlackPhoto" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1315, 181)
@@ -197,6 +208,7 @@ shape = SubResource("RectangleShape2D_bwacq")
 
 [node name="AudioStreamPlayer" parent="WaltBlackPhoto" index="1"]
 stream = ExtResource("24_iuwyb")
+bus = &"Master"
 
 [node name="BloodStain" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1590.9999, 949)
@@ -211,6 +223,7 @@ shape = SubResource("RectangleShape2D_sphvx")
 
 [node name="AudioStreamPlayer" parent="BloodStain" index="1"]
 stream = ExtResource("27_yv0u1")
+bus = &"Master"
 
 [node name="WallCrack" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(679, 344)
@@ -225,6 +238,7 @@ shape = SubResource("RectangleShape2D_ipco6")
 
 [node name="AudioStreamPlayer" parent="WallCrack" index="1"]
 stream = ExtResource("30_wltlc")
+bus = &"Master"
 
 [node name="Mattress" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(551, 655)
@@ -240,6 +254,7 @@ shape = SubResource("RectangleShape2D_08d0o")
 
 [node name="AudioStreamPlayer" parent="Mattress" index="1"]
 stream = ExtResource("33_styym")
+bus = &"Master"
 
 [node name="Cauldron" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1355, 627)
@@ -251,6 +266,9 @@ item_name = "Cauldron"
 [node name="CollisionShape2D" parent="Cauldron/StaticBody2D" index="0"]
 position = Vector2(7.867676, 43)
 shape = SubResource("RectangleShape2D_tl7to")
+
+[node name="AudioStreamPlayer" parent="Cauldron" index="1"]
+bus = &"Master"
 
 [node name="Clock" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1666, 167)
@@ -269,6 +287,9 @@ position = Vector2(-756.65515, 603.8612)
 scale = Vector2(6.000001, 6.0000005)
 shape = SubResource("RectangleShape2D_15if8")
 
+[node name="AudioStreamPlayer" parent="Clock" index="1"]
+bus = &"Master"
+
 [node name="Poster" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1664.979, 457.36514)
 rotation = 0.4834562
@@ -286,11 +307,31 @@ position = Vector2(-551.2051, 643.55615)
 scale = Vector2(6.0000014, 6.0000005)
 shape = SubResource("RectangleShape2D_u3yip")
 
+[node name="AudioStreamPlayer" parent="Poster" index="1"]
+bus = &"Master"
+
+[node name="Trash" parent="." instance=ExtResource("1_2f21x")]
+position = Vector2(847.9999, 930)
+scale = Vector2(0.7063429, 0.77891195)
+texture = ExtResource("40_iuwyb")
+dialogue = ExtResource("41_yv0u1")
+item_name = "Cauldron"
+
+[node name="StaticBody2D" parent="Trash" index="0"]
+position = Vector2(292.03543, -318)
+
+[node name="CollisionShape2D" parent="Trash/StaticBody2D" index="0"]
+position = Vector2(-564.24994, 620.59393)
+scale = Vector2(6.000001, 6.0000005)
+shape = SubResource("RectangleShape2D_wltlc")
+
+[node name="AudioStreamPlayer" parent="Trash" index="1"]
+bus = &"Master"
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("40_7uc5s")
 volume_db = -80.0
 autoplay = true
-bus = &"Music"
 parameters/looping = true
 script = ExtResource("41_3eg4m")
 
@@ -307,3 +348,4 @@ script = ExtResource("41_3eg4m")
 [editable path="Cauldron"]
 [editable path="Clock"]
 [editable path="Poster"]
+[editable path="Trash"]
