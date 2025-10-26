@@ -1,8 +1,14 @@
 ~ start
-Brian White: Do You Want To KEEP this Item?
-- Yes
-	Brian White: You have kept this item.
-	do add_item_to_clues()
+Brian White: Is this item a clue?
+- Means
+	Brian White: This is probably how they killed me.
+	do add_item_to_clues(0)
+- Motive
+	Brian White: This is probably the motive for killing me.
+	do add_item_to_clues(1)
+- Weapon
+	Brian White: This is probably the murder weapon.
+	do add_item_to_clues(2)
 - No
 	Brian White: You have not kept this item.
 => END
