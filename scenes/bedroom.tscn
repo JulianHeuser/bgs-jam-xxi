@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=47 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://ceoj71lx73dxk" path="res://Images/Cauldron.png" id="21_0wemr"]
 [ext_resource type="Resource" uid="uid://bq3xb00pvroaf" path="res://dialogue/cauldron.dialogue" id="22_0wemr"]
 [ext_resource type="Texture2D" uid="uid://bgo8qxtbxsf85" path="res://Images/Crack.png" id="22_lwmpn"]
+[ext_resource type="AudioStream" uid="uid://iphpa3h3b2fj" path="res://sounds/werner.wav" id="22_styym"]
 [ext_resource type="Texture2D" uid="uid://dwx6438kcyveb" path="res://Images/Bed.png" id="24_6lafe"]
 [ext_resource type="AudioStream" uid="uid://jyr8duuivinh" path="res://sounds/picture.wav" id="24_iuwyb"]
 [ext_resource type="AudioStream" uid="uid://7ehn2lm8gfjm" path="res://sounds/blood.wav" id="27_yv0u1"]
@@ -130,7 +131,7 @@ dialogue = ExtResource("12_lv7wv")
 item_name = "Walt Black Photo"
 
 [node name="AudioStreamPlayer" parent="WaltBlackPhoto" index="0"]
-stream = ExtResource("24_iuwyb")
+stream = ExtResource("22_styym")
 
 [node name="BloodStain" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1590.9999, 949)
@@ -197,6 +198,9 @@ skew = -0.5550147
 texture = ExtResource("30_bwacq")
 dialogue = ExtResource("31_sphvx")
 item_name = "poster"
+
+[node name="AudioStreamPlayer" parent="Poster" index="0"]
+stream = ExtResource("24_iuwyb")
 
 [node name="Trash" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(891, 942.00006)
