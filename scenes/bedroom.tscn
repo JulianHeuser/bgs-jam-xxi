@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=46 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
@@ -46,42 +46,6 @@
 [ext_resource type="Resource" uid="uid://ccdynrhx050dt" path="res://dialogue/trash.dialogue" id="41_yv0u1"]
 [ext_resource type="Script" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]
-size = Vector2(120.616196, 94)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwtdf"]
-size = Vector2(132.08784, 145.95073)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cixf6"]
-size = Vector2(117.3386, 130.33334)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bd3ru"]
-size = Vector2(153.06456, 125.333336)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwacq"]
-size = Vector2(166.22363, 143.38753)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sphvx"]
-size = Vector2(168.4801, 75.75759)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipco6"]
-size = Vector2(121.53841, 125.00261)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_08d0o"]
-size = Vector2(311.99994, 196.29126)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl7to"]
-size = Vector2(114.71648, 93)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_15if8"]
-size = Vector2(730.9914, 716.77026)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3yip"]
-size = Vector2(374.6087, 205.04507)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wltlc"]
-size = Vector2(114.20326, 115.54579)
-
 [node name="Bedroom" type="Node2D"]
 script = ExtResource("1_u8wxw")
 
@@ -109,79 +73,54 @@ position = Vector2(708, 212)
 texture = ExtResource("5_ns14s")
 
 [node name="Book" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(206.99998, 286)
+position = Vector2(230, 281.99997)
 scale = Vector2(0.52217185, 0.51344335)
 texture = ExtResource("3_7lolw")
 dialogue = ExtResource("4_pwtdf")
 item_name = "Book"
 
-[node name="CollisionShape2D" parent="Book/StaticBody2D" index="0"]
-position = Vector2(-23.598816, 162)
-shape = SubResource("RectangleShape2D_mkmp1")
-
-[node name="AudioStreamPlayer" parent="Book" index="1"]
+[node name="AudioStreamPlayer" parent="Book" index="0"]
 stream = ExtResource("11_7uc5s")
-bus = &"Master"
 
 [node name="Trophy" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(318, 109.000015)
-scale = Vector2(0.49482805, 0.4865566)
+position = Vector2(291.00003, 163)
+scale = Vector2(0.38022655, 0.37387076)
 texture = ExtResource("5_7lolw")
 dialogue = ExtResource("6_pwtdf")
 item_name = "Trophy"
 
-[node name="CollisionShape2D" parent="Trophy/StaticBody2D" index="0"]
-position = Vector2(-2.9499512, 71.85217)
-shape = SubResource("RectangleShape2D_pwtdf")
-
-[node name="AudioStreamPlayer" parent="Trophy" index="1"]
+[node name="AudioStreamPlayer" parent="Trophy" index="0"]
 stream = ExtResource("14_3eg4m")
-bus = &"Master"
 
 [node name="BlueCrystal" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(568, 109)
-scale = Vector2(0.5, 0.492)
+position = Vector2(575.00006, 141.00002)
+scale = Vector2(0.3671875, 0.3613125)
 texture = ExtResource("7_lj4hb")
 dialogue = ExtResource("8_lv7wv")
 item_name = "Blue Crystal"
 
-[node name="CollisionShape2D" parent="BlueCrystal/StaticBody2D" index="0"]
-position = Vector2(-47.197693, 25)
-shape = SubResource("RectangleShape2D_cixf6")
-
-[node name="AudioStreamPlayer" parent="BlueCrystal" index="1"]
+[node name="AudioStreamPlayer" parent="BlueCrystal" index="0"]
 stream = ExtResource("17_boshx")
-bus = &"Master"
 
 [node name="YellowCrystal" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(877, 112)
-scale = Vector2(0.5, 0.492)
+position = Vector2(831, 134.00002)
+scale = Vector2(0.33203125, 0.32671875)
 texture = ExtResource("9_k5fq4")
 dialogue = ExtResource("10_4wfg3")
 item_name = "Yellow Crystal"
 
-[node name="CollisionShape2D" parent="YellowCrystal/StaticBody2D" index="0"]
-position = Vector2(-7.866501, 14)
-shape = SubResource("RectangleShape2D_bd3ru")
-
-[node name="AudioStreamPlayer" parent="YellowCrystal" index="1"]
+[node name="AudioStreamPlayer" parent="YellowCrystal" index="0"]
 stream = ExtResource("17_boshx")
-bus = &"Master"
 
 [node name="RedCrystal" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(700, 102)
-scale = Vector2(0.5, 0.492)
+position = Vector2(688, 121.00001)
+scale = Vector2(0.3828125, 0.3766875)
 texture = ExtResource("11_cixf6")
 dialogue = ExtResource("11_mk2nf")
 item_name = "Red Crystal"
 
-[node name="CollisionShape2D" parent="RedCrystal/StaticBody2D" index="0"]
-position = Vector2(-50.14795, 36)
-shape = SubResource("RectangleShape2D_bd3ru")
-
-[node name="AudioStreamPlayer" parent="RedCrystal" index="1"]
+[node name="AudioStreamPlayer" parent="RedCrystal" index="0"]
 stream = ExtResource("17_boshx")
-bus = &"Master"
 
 [node name="WaltBlackPhoto" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1315, 181)
@@ -190,13 +129,8 @@ texture = ExtResource("13_bd3ru")
 dialogue = ExtResource("12_lv7wv")
 item_name = "Walt Black Photo"
 
-[node name="CollisionShape2D" parent="WaltBlackPhoto/StaticBody2D" index="0"]
-position = Vector2(-10.670898, 90.1626)
-shape = SubResource("RectangleShape2D_bwacq")
-
-[node name="AudioStreamPlayer" parent="WaltBlackPhoto" index="1"]
+[node name="AudioStreamPlayer" parent="WaltBlackPhoto" index="0"]
 stream = ExtResource("24_iuwyb")
-bus = &"Master"
 
 [node name="BloodStain" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1590.9999, 949)
@@ -205,13 +139,8 @@ texture = ExtResource("17_wlwc7")
 dialogue = ExtResource("13_k5fq4")
 item_name = "Blood Stain"
 
-[node name="CollisionShape2D" parent="BloodStain/StaticBody2D" index="0"]
-position = Vector2(-3.9013672, 83.07202)
-shape = SubResource("RectangleShape2D_sphvx")
-
-[node name="AudioStreamPlayer" parent="BloodStain" index="1"]
+[node name="AudioStreamPlayer" parent="BloodStain" index="0"]
 stream = ExtResource("27_yv0u1")
-bus = &"Master"
 
 [node name="WallCrack" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(679, 344)
@@ -220,13 +149,8 @@ texture = ExtResource("22_lwmpn")
 dialogue = ExtResource("14_4wfg3")
 item_name = "Wall Crack"
 
-[node name="CollisionShape2D" parent="WallCrack/StaticBody2D" index="0"]
-position = Vector2(10.769531, 35.007813)
-shape = SubResource("RectangleShape2D_ipco6")
-
-[node name="AudioStreamPlayer" parent="WallCrack" index="1"]
+[node name="AudioStreamPlayer" parent="WallCrack" index="0"]
 stream = ExtResource("30_wltlc")
-bus = &"Master"
 
 [node name="Mattress" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(551, 655)
@@ -235,29 +159,19 @@ texture = ExtResource("24_6lafe")
 dialogue = ExtResource("17_bd3ru")
 item_name = "Mattress"
 
-[node name="CollisionShape2D" parent="Mattress/StaticBody2D" index="0"]
-position = Vector2(-2.666626, 29.850708)
-scale = Vector2(6.0000014, 6.0000005)
-shape = SubResource("RectangleShape2D_08d0o")
-
-[node name="AudioStreamPlayer" parent="Mattress" index="1"]
+[node name="AudioStreamPlayer" parent="Mattress" index="0"]
 stream = ExtResource("33_styym")
-bus = &"Master"
 
 [node name="Surfboard" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(722, 603.00006)
-rotation = -0.8115781
-scale = Vector2(1, 0.983)
-skew = -0.4537856
+position = Vector2(1156, 847.00006)
+rotation = -1.1170107
+scale = Vector2(1.0433319, 1.0255952)
+skew = -0.13439035
 texture = ExtResource("2_mkmp1")
 item_name = "SurfBoard"
 
-[node name="CollisionShape2D" parent="Surfboard/StaticBody2D" index="0"]
-position = Vector2(-16.193756, 7.623291)
-
-[node name="AudioStreamPlayer" parent="Surfboard" index="1"]
+[node name="AudioStreamPlayer" parent="Surfboard" index="0"]
 stream = ExtResource("8_3lri6")
-bus = &"Master"
 
 [node name="Cauldron" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1355, 627)
@@ -265,13 +179,6 @@ scale = Vector2(1.017, 1)
 texture = ExtResource("21_0wemr")
 dialogue = ExtResource("22_0wemr")
 item_name = "Cauldron"
-
-[node name="CollisionShape2D" parent="Cauldron/StaticBody2D" index="0"]
-position = Vector2(7.867676, 43)
-shape = SubResource("RectangleShape2D_tl7to")
-
-[node name="AudioStreamPlayer" parent="Cauldron" index="1"]
-bus = &"Master"
 
 [node name="Clock" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1666, 167)
@@ -282,17 +189,6 @@ texture = ExtResource("28_lwmpn")
 dialogue = ExtResource("29_6lafe")
 item_name = "clock"
 
-[node name="StaticBody2D" parent="Clock" index="0"]
-position = Vector2(292.03543, -318)
-
-[node name="CollisionShape2D" parent="Clock/StaticBody2D" index="0"]
-position = Vector2(-756.65515, 603.8612)
-scale = Vector2(6.000001, 6.0000005)
-shape = SubResource("RectangleShape2D_15if8")
-
-[node name="AudioStreamPlayer" parent="Clock" index="1"]
-bus = &"Master"
-
 [node name="Poster" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1664.979, 457.36514)
 rotation = 0.4834562
@@ -302,34 +198,12 @@ texture = ExtResource("30_bwacq")
 dialogue = ExtResource("31_sphvx")
 item_name = "poster"
 
-[node name="StaticBody2D" parent="Poster" index="0"]
-position = Vector2(292.03543, -318)
-
-[node name="CollisionShape2D" parent="Poster/StaticBody2D" index="0"]
-position = Vector2(-551.2051, 643.55615)
-scale = Vector2(6.0000014, 6.0000005)
-shape = SubResource("RectangleShape2D_u3yip")
-
-[node name="AudioStreamPlayer" parent="Poster" index="1"]
-bus = &"Master"
-
 [node name="Trash" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(847.9999, 930)
+position = Vector2(891, 942.00006)
 scale = Vector2(0.7063429, 0.77891195)
 texture = ExtResource("40_iuwyb")
 dialogue = ExtResource("41_yv0u1")
 item_name = "trash"
-
-[node name="StaticBody2D" parent="Trash" index="0"]
-position = Vector2(292.03543, -318)
-
-[node name="CollisionShape2D" parent="Trash/StaticBody2D" index="0"]
-position = Vector2(-564.24994, 620.59393)
-scale = Vector2(6.000001, 6.0000005)
-shape = SubResource("RectangleShape2D_wltlc")
-
-[node name="AudioStreamPlayer" parent="Trash" index="1"]
-bus = &"Master"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("40_7uc5s")
@@ -341,8 +215,6 @@ script = ExtResource("41_3eg4m")
 [node name="Node" type="Node" parent="."]
 script = ExtResource("45_wltlc")
 intro_dialogue = ExtResource("2_yv0u1")
-
-[node name="Node2D" type="Node2D" parent="."]
 
 [editable path="Book"]
 [editable path="Trophy"]
