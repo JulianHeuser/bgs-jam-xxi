@@ -50,17 +50,17 @@ alignment = 1
 
 [node name="Play" type="Button" parent="VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 125
 text = "Play"
 
 [node name="Options" type="Button" parent="VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 125
 text = "Options"
 
 [node name="Quit" type="Button" parent="VBoxContainer2/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 125
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer2/VBoxContainer/Play" to="." method="_on_play_pressed"]
