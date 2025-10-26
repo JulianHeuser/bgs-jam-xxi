@@ -1,5 +1,5 @@
 ~ start
-Brian White: Is this item a clue?
+Brian White: Is this item a clue? Means is how, motive is why, and the weapon is what killed me.
 - Means
 	Brian White: This is probably how they killed me.
 	do add_item_to_clues(0)
