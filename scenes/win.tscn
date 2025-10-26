@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwln11qqvqhoa"]
+[gd_scene load_steps=5 format=3 uid="uid://cwln11qqvqhoa"]
 
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_826fv"]
 [ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="1_r4oei"]
 [ext_resource type="Texture2D" uid="uid://b4hbnykae1his" path="res://Images/WINNER.png" id="2_iiocm"]
+[ext_resource type="AudioStream" uid="uid://4tqip7rqgyjm" path="res://sounds/win.wav" id="4_yxbqr"]
 
 [node name="WIN" type="Control"]
 layout_mode = 3
@@ -53,5 +54,10 @@ theme_override_constants/h_separation = 8
 theme_override_fonts/font = ExtResource("1_r4oei")
 theme_override_font_sizes/font_size = 100
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yxbqr")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]

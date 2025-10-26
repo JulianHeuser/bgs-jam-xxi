@@ -22,3 +22,6 @@ collision_mask = 4
 position = Vector2(-0.00012207001, 0)
 scale = Vector2(6.0000005, 6.0000005)
 shape = SubResource("RectangleShape2D_gqkfu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

@@ -25,6 +25,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and interactable:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if is_pixel_opaque(get_local_mouse_position()):
+				if $AudioStreamPlayer.stream != null:
+					$AudioStreamPlayer.play()
 				DialogueManager.show_dialogue_balloon(dialogue,"start", [self])
 				await DialogueManager.dialogue_ended
 				if item_name not in selected_items:

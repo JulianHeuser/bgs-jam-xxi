@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=53 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
@@ -12,25 +12,35 @@
 [ext_resource type="Texture2D" uid="uid://bhqpav3ld1boh" path="res://Images/Shelf1.png" id="5_ns14s"]
 [ext_resource type="Resource" uid="uid://bh80nt22cvfb2" path="res://dialogue/trophy.dialogue" id="6_pwtdf"]
 [ext_resource type="Texture2D" uid="uid://mcaclksc8dwf" path="res://Images/CrystalBlue.png" id="7_lj4hb"]
+[ext_resource type="AudioStream" uid="uid://b8ucbvhbdw7ik" path="res://sounds/surf.wav" id="8_3lri6"]
 [ext_resource type="Resource" uid="uid://dft3prcliewp8" path="res://dialogue/bluecrystal.dialogue" id="8_lv7wv"]
 [ext_resource type="Texture2D" uid="uid://5bep5q3h68yo" path="res://Images/CrystalYellow.png" id="9_k5fq4"]
 [ext_resource type="Resource" uid="uid://cv6ap13wbk06m" path="res://dialogue/yellowcrystal.dialogue" id="10_4wfg3"]
+[ext_resource type="AudioStream" uid="uid://c8vqq0x0so78q" path="res://sounds/book.wav" id="11_7uc5s"]
 [ext_resource type="Texture2D" uid="uid://wbp4v3gdk4jv" path="res://Images/CrystalRed.png" id="11_cixf6"]
 [ext_resource type="Resource" uid="uid://2t23bflei1h6" path="res://dialogue/redcrystal.dialogue" id="11_mk2nf"]
 [ext_resource type="Resource" uid="uid://h036o3hfg0l6" path="res://dialogue/waltblackphoto.dialogue" id="12_lv7wv"]
 [ext_resource type="Texture2D" uid="uid://cgrtmdkjyvesk" path="res://Images/Picture.png" id="13_bd3ru"]
 [ext_resource type="Resource" uid="uid://dc1toe5f1w2r8" path="res://dialogue/bloodstain.dialogue" id="13_k5fq4"]
+[ext_resource type="AudioStream" uid="uid://52vck64d7iqb" path="res://sounds/trophy.wav" id="14_3eg4m"]
 [ext_resource type="Resource" uid="uid://x5lxag33bm86" path="res://dialogue/wallcrack.dialogue" id="14_4wfg3"]
 [ext_resource type="Resource" uid="uid://5vilqad8uj3" path="res://dialogue/mattress.dialogue" id="17_bd3ru"]
+[ext_resource type="AudioStream" uid="uid://baw8vqml6vkns" path="res://sounds/crystal.wav" id="17_boshx"]
 [ext_resource type="Texture2D" uid="uid://3cpqkbyprx45" path="res://Images/Blood.png" id="17_wlwc7"]
 [ext_resource type="Texture2D" uid="uid://ceoj71lx73dxk" path="res://Images/Cauldron.png" id="21_0wemr"]
 [ext_resource type="Resource" uid="uid://bq3xb00pvroaf" path="res://dialogue/cauldron.dialogue" id="22_0wemr"]
 [ext_resource type="Texture2D" uid="uid://bgo8qxtbxsf85" path="res://Images/Crack.png" id="22_lwmpn"]
 [ext_resource type="Texture2D" uid="uid://dwx6438kcyveb" path="res://Images/Bed.png" id="24_6lafe"]
+[ext_resource type="AudioStream" uid="uid://jyr8duuivinh" path="res://sounds/picture.wav" id="24_iuwyb"]
+[ext_resource type="AudioStream" uid="uid://7ehn2lm8gfjm" path="res://sounds/blood.wav" id="27_yv0u1"]
 [ext_resource type="Texture2D" uid="uid://dw1kna5i3bsp1" path="res://Images/Clock.png" id="28_lwmpn"]
 [ext_resource type="Resource" uid="uid://brndfhwmrpgui" path="res://dialogue/clock.dialogue" id="29_6lafe"]
 [ext_resource type="Texture2D" uid="uid://cloermstals10" path="res://Images/post.png" id="30_bwacq"]
+[ext_resource type="AudioStream" uid="uid://d2yolvv8m3jni" path="res://sounds/crack.wav" id="30_wltlc"]
 [ext_resource type="Resource" uid="uid://cihrcq6a7q2s5" path="res://dialogue/poster.dialogue" id="31_sphvx"]
+[ext_resource type="AudioStream" uid="uid://bpnv54mi2fqtf" path="res://sounds/bed.wav" id="33_styym"]
+[ext_resource type="AudioStream" uid="uid://dkfhp4g7xbksi" path="res://sounds/bgs_loop.ogg" id="40_7uc5s"]
+[ext_resource type="Script" uid="uid://d3c1c8tm47gqp" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]
 size = Vector2(120.616196, 94)
@@ -101,6 +111,9 @@ item_name = "SurfBoard"
 [node name="CollisionShape2D" parent="Surfboard/StaticBody2D" index="0"]
 position = Vector2(-7, 5.086426)
 
+[node name="AudioStreamPlayer" parent="Surfboard" index="1"]
+stream = ExtResource("8_3lri6")
+
 [node name="Book" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(206.99998, 286)
 scale = Vector2(0.52217185, 0.51344335)
@@ -111,6 +124,9 @@ item_name = "Book"
 [node name="CollisionShape2D" parent="Book/StaticBody2D" index="0"]
 position = Vector2(-23.598816, 162)
 shape = SubResource("RectangleShape2D_mkmp1")
+
+[node name="AudioStreamPlayer" parent="Book" index="1"]
+stream = ExtResource("11_7uc5s")
 
 [node name="Trophy" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(318, 109.000015)
@@ -123,6 +139,9 @@ item_name = "Trophy"
 position = Vector2(-2.9499512, 71.85217)
 shape = SubResource("RectangleShape2D_pwtdf")
 
+[node name="AudioStreamPlayer" parent="Trophy" index="1"]
+stream = ExtResource("14_3eg4m")
+
 [node name="BlueCrystal" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(568, 109)
 scale = Vector2(0.5, 0.492)
@@ -133,6 +152,9 @@ item_name = "Blue Crystal"
 [node name="CollisionShape2D" parent="BlueCrystal/StaticBody2D" index="0"]
 position = Vector2(-47.197693, 25)
 shape = SubResource("RectangleShape2D_cixf6")
+
+[node name="AudioStreamPlayer" parent="BlueCrystal" index="1"]
+stream = ExtResource("17_boshx")
 
 [node name="YellowCrystal" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(877, 112)
@@ -145,6 +167,9 @@ item_name = "Yellow Crystal"
 position = Vector2(-7.866501, 14)
 shape = SubResource("RectangleShape2D_bd3ru")
 
+[node name="AudioStreamPlayer" parent="YellowCrystal" index="1"]
+stream = ExtResource("17_boshx")
+
 [node name="RedCrystal" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(700, 102)
 scale = Vector2(0.5, 0.492)
@@ -155,6 +180,9 @@ item_name = "Red Crystal"
 [node name="CollisionShape2D" parent="RedCrystal/StaticBody2D" index="0"]
 position = Vector2(-50.14795, 36)
 shape = SubResource("RectangleShape2D_bd3ru")
+
+[node name="AudioStreamPlayer" parent="RedCrystal" index="1"]
+stream = ExtResource("17_boshx")
 
 [node name="WaltBlackPhoto" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1315, 181)
@@ -167,6 +195,9 @@ item_name = "Walt Black Photo"
 position = Vector2(-10.670898, 90.1626)
 shape = SubResource("RectangleShape2D_bwacq")
 
+[node name="AudioStreamPlayer" parent="WaltBlackPhoto" index="1"]
+stream = ExtResource("24_iuwyb")
+
 [node name="BloodStain" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1590.9999, 949)
 scale = Vector2(0.65, 0.638)
@@ -177,6 +208,9 @@ item_name = "Blood Stain"
 [node name="CollisionShape2D" parent="BloodStain/StaticBody2D" index="0"]
 position = Vector2(-3.9013672, 83.07202)
 shape = SubResource("RectangleShape2D_sphvx")
+
+[node name="AudioStreamPlayer" parent="BloodStain" index="1"]
+stream = ExtResource("27_yv0u1")
 
 [node name="WallCrack" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(679, 344)
@@ -189,6 +223,9 @@ item_name = "Wall Crack"
 position = Vector2(10.769531, 35.007813)
 shape = SubResource("RectangleShape2D_ipco6")
 
+[node name="AudioStreamPlayer" parent="WallCrack" index="1"]
+stream = ExtResource("30_wltlc")
+
 [node name="Mattress" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(551, 655)
 scale = Vector2(0.75, 0.737)
@@ -200,6 +237,9 @@ item_name = "Mattress"
 position = Vector2(-2.666626, 29.850708)
 scale = Vector2(6.0000014, 6.0000005)
 shape = SubResource("RectangleShape2D_08d0o")
+
+[node name="AudioStreamPlayer" parent="Mattress" index="1"]
+stream = ExtResource("33_styym")
 
 [node name="Cauldron" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1355, 627)
@@ -245,6 +285,14 @@ position = Vector2(292.03543, -318)
 position = Vector2(-551.2051, 643.55615)
 scale = Vector2(6.0000014, 6.0000005)
 shape = SubResource("RectangleShape2D_u3yip")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("40_7uc5s")
+volume_db = -80.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+script = ExtResource("41_3eg4m")
 
 [editable path="Surfboard"]
 [editable path="Book"]
