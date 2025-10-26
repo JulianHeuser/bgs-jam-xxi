@@ -277,7 +277,7 @@ scale = Vector2(0.07795829, 0.07974998)
 skew = 0.34906584
 texture = ExtResource("28_lwmpn")
 dialogue = ExtResource("29_6lafe")
-item_name = "Cauldron"
+item_name = "clock"
 
 [node name="StaticBody2D" parent="Clock" index="0"]
 position = Vector2(292.03543, -318)
@@ -297,7 +297,7 @@ scale = Vector2(0.22119744, 0.3483128)
 skew = -0.5550147
 texture = ExtResource("30_bwacq")
 dialogue = ExtResource("31_sphvx")
-item_name = "Cauldron"
+item_name = "poster"
 
 [node name="StaticBody2D" parent="Poster" index="0"]
 position = Vector2(292.03543, -318)
@@ -315,7 +315,7 @@ position = Vector2(847.9999, 930)
 scale = Vector2(0.7063429, 0.77891195)
 texture = ExtResource("40_iuwyb")
 dialogue = ExtResource("41_yv0u1")
-item_name = "Cauldron"
+item_name = "trash"
 
 [node name="StaticBody2D" parent="Trash" index="0"]
 position = Vector2(292.03543, -318)
