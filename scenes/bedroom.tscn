@@ -342,6 +342,8 @@ script = ExtResource("41_3eg4m")
 script = ExtResource("45_wltlc")
 intro_dialogue = ExtResource("2_yv0u1")
 
+[node name="Node2D" type="Node2D" parent="."]
+
 [editable path="Book"]
 [editable path="Trophy"]
 [editable path="BlueCrystal"]
