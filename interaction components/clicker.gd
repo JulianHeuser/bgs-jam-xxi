@@ -7,6 +7,7 @@ class_name Clicker extends Sprite2D
 var interactable = true
 
 @onready var ask_dialogue : DialogueResource = preload("res://dialogue/ask_dialogue.dialogue")
+@onready var already_selected: DialogueResource = preload("res://dialogue/already_selected.dialogue")
 
 static var selected_items : Array[String]
 static var num_of_items : int = 0
@@ -26,7 +27,12 @@ func _input(event: InputEvent) -> void:
 			if is_pixel_opaque(get_local_mouse_position()):
 				DialogueManager.show_dialogue_balloon(dialogue,"start", [self])
 				await DialogueManager.dialogue_ended
-				DialogueManager.show_dialogue_balloon(ask_dialogue,"start", [self])
+				if item_name not in selected_items:
+					DialogueManager.show_dialogue_balloon(ask_dialogue,"start", [self])
+				else:
+					DialogueManager.show_dialogue_balloon(already_selected,"start", [self])
+					
+				
 
 func add_item_to_clues() -> void:
 	if item_name in selected_items:
