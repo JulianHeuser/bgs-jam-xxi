@@ -29,7 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://dwx6438kcyveb" path="res://Images/Bed.png" id="24_6lafe"]
 [ext_resource type="Texture2D" uid="uid://dw1kna5i3bsp1" path="res://Images/Clock.png" id="28_lwmpn"]
 [ext_resource type="Resource" uid="uid://brndfhwmrpgui" path="res://dialogue/clock.dialogue" id="29_6lafe"]
-[ext_resource type="Texture2D" uid="uid://nlfkuemffveo" path="res://Images/poster.png" id="30_bwacq"]
+[ext_resource type="Texture2D" uid="uid://cloermstals10" path="res://Images/post.png" id="30_bwacq"]
 [ext_resource type="Resource" uid="uid://cihrcq6a7q2s5" path="res://dialogue/poster.dialogue" id="31_sphvx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]

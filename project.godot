@@ -13,7 +13,7 @@ config_version=5
 config/name="BOO!"
 run/main_scene="uid://bvmt4ppfunoyf"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dvjw646f7h3gp"
 
 [autoload]
 
