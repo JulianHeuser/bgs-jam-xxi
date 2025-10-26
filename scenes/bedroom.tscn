@@ -4,7 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_u8wxw"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://tgxyfnyujrbm" path="res://UI.tscn" id="2_43jao"]
+=======
+[ext_resource type="PackedScene" uid="uid://bgsuauel8r4k5" path="res://UI.tscn" id="2_43jao"]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="PackedScene" uid="uid://bgsuauel8r4k5" path="res://UI.tscn" id="2_43jao"]
 >>>>>>> Stashed changes
@@ -247,8 +251,12 @@ position = Vector2(292.03543, -318)
 
 [node name="CollisionShape2D" parent="Poster/StaticBody2D" index="0"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2(-551.2051, 643.55615)
 scale = Vector2(6.0000014, 6.0000005)
+=======
+position = Vector2(-632.38086, 651.79736)
+>>>>>>> Stashed changes
 =======
 position = Vector2(-632.38086, 651.79736)
 >>>>>>> Stashed changes
