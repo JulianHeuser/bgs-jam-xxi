@@ -71,12 +71,12 @@ theme_override_font_sizes/font_size = 125
 text = "Exit"
 
 [node name="Squash" type="Sprite2D" parent="VBoxContainer2/VBoxContainer"]
-position = Vector2(952, 1.5)
+position = Vector2(721, 362.5)
 scale = Vector2(0.6660157, 0.7480469)
 texture = ExtResource("3_70i5f")
 
 [node name="Pumpkin2" type="Sprite2D" parent="VBoxContainer2/VBoxContainer"]
-position = Vector2(-441, 101.5)
+position = Vector2(-421, 332.5)
 texture = ExtResource("4_mj5lg")
 
 [node name="Pumpkin1" type="Sprite2D" parent="."]
@@ -94,7 +94,7 @@ scale = Vector2(2.1875, 2.0104167)
 texture = ExtResource("7_i42df")
 
 [node name="Pumpkin3" type="Sprite2D" parent="."]
-position = Vector2(1511.9999, 787)
+position = Vector2(521, 935)
 scale = Vector2(0.71484375, 0.7207031)
 texture = ExtResource("8_7jp70")
 
