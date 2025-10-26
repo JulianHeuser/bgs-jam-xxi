@@ -1,5 +1,5 @@
 ~ start
-Brian White: Is this item a clue? \nMeans is how, catalyst is why, and the weapon is what killed me.
+Brian White: Is this item a clue? \nCatalyst is how, Motive is why, and the weapon is what killed me.
 - Catalyst
 	Brian White: This is probably how they killed me.
 	do add_item_to_clues(0)
