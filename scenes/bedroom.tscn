@@ -44,7 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://c6jyvsyjkf8ih" path="res://Images/Trashcan.png" id="40_iuwyb"]
 [ext_resource type="Script" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
 [ext_resource type="Resource" uid="uid://ccdynrhx050dt" path="res://dialogue/trash.dialogue" id="41_yv0u1"]
-[ext_resource type="Script" uid="uid://ck1ycnymgw10" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
+[ext_resource type="Script" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]
 size = Vector2(120.616196, 94)
@@ -107,20 +107,6 @@ texture = ExtResource("4_lyvny")
 [node name="Shelf1" type="Sprite2D" parent="."]
 position = Vector2(708, 212)
 texture = ExtResource("5_ns14s")
-
-[node name="Surfboard" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(1154.0001, 395)
-rotation = -1.5707964
-scale = Vector2(1, 0.983)
-texture = ExtResource("2_mkmp1")
-item_name = "SurfBoard"
-
-[node name="CollisionShape2D" parent="Surfboard/StaticBody2D" index="0"]
-position = Vector2(-7, 5.086426)
-
-[node name="AudioStreamPlayer" parent="Surfboard" index="1"]
-stream = ExtResource("8_3lri6")
-bus = &"Master"
 
 [node name="Book" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(206.99998, 286)
@@ -258,6 +244,21 @@ shape = SubResource("RectangleShape2D_08d0o")
 stream = ExtResource("33_styym")
 bus = &"Master"
 
+[node name="Surfboard" parent="." instance=ExtResource("1_2f21x")]
+position = Vector2(722, 603.00006)
+rotation = -0.8115781
+scale = Vector2(1, 0.983)
+skew = -0.4537856
+texture = ExtResource("2_mkmp1")
+item_name = "SurfBoard"
+
+[node name="CollisionShape2D" parent="Surfboard/StaticBody2D" index="0"]
+position = Vector2(-16.193756, 7.623291)
+
+[node name="AudioStreamPlayer" parent="Surfboard" index="1"]
+stream = ExtResource("8_3lri6")
+bus = &"Master"
+
 [node name="Cauldron" parent="." instance=ExtResource("1_2f21x")]
 position = Vector2(1355, 627)
 scale = Vector2(1.017, 1)
@@ -341,7 +342,6 @@ script = ExtResource("41_3eg4m")
 script = ExtResource("45_wltlc")
 intro_dialogue = ExtResource("2_yv0u1")
 
-[editable path="Surfboard"]
 [editable path="Book"]
 [editable path="Trophy"]
 [editable path="BlueCrystal"]
@@ -351,6 +351,7 @@ intro_dialogue = ExtResource("2_yv0u1")
 [editable path="BloodStain"]
 [editable path="WallCrack"]
 [editable path="Mattress"]
+[editable path="Surfboard"]
 [editable path="Cauldron"]
 [editable path="Clock"]
 [editable path="Poster"]
