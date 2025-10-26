@@ -44,10 +44,10 @@
 [ext_resource type="AudioStream" uid="uid://j57tnemi50xf" path="res://sounds/Other/cauldron.wav" id="36_wolxw"]
 [ext_resource type="AudioStream" uid="uid://dkfhp4g7xbksi" path="res://sounds/bgs_loop.ogg" id="40_7uc5s"]
 [ext_resource type="Texture2D" uid="uid://c6jyvsyjkf8ih" path="res://Images/Trashcan.png" id="40_iuwyb"]
-[ext_resource type="Script" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
+[ext_resource type="Script" uid="uid://d3c1c8tm47gqp" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
 [ext_resource type="Resource" uid="uid://ccdynrhx050dt" path="res://dialogue/trash.dialogue" id="41_yv0u1"]
 [ext_resource type="AudioStream" uid="uid://bb1dxn7aobvls" path="res://sounds/Other/trash.wav" id="43_6bpri"]
-[ext_resource type="Script" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
+[ext_resource type="Script" uid="uid://ck1ycnymgw10" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
 [ext_resource type="Texture2D" uid="uid://d4ehqjare5te4" path="res://Images/pumpkins/vine2.png" id="49_mn5e5"]
 [ext_resource type="Texture2D" uid="uid://c40l16a50yfvo" path="res://Images/pumpkins/vine1.png" id="50_i3afc"]
 
