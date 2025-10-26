@@ -226,6 +226,7 @@ stream = ExtResource("43_6bpri")
 stream = ExtResource("40_7uc5s")
 volume_db = -80.0
 autoplay = true
+bus = &"Music"
 parameters/looping = true
 script = ExtResource("41_3eg4m")
 

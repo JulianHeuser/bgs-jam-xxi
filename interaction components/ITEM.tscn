@@ -11,3 +11,4 @@ script = ExtResource("2_jyojx")
 dialogue = ExtResource("3_3utmp")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

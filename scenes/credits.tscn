@@ -45,11 +45,11 @@ prof. Jeffery Werner - Voice actor + use of likeness"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="menu" type="Button" parent="VBoxContainer"]
+[node name="options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_0bpdh")
 theme_override_font_sizes/font_size = 125
-text = "Back To Menu"
+text = "Back"
 
-[connection signal="pressed" from="VBoxContainer/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]

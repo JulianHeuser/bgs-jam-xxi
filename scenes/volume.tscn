@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://c70w1jc1irxfr"]
+
+[ext_resource type="Script" uid="uid://bmt7xn7qidkv7" path="res://scenes/volume.gd" id="1_gm22o"]
+[ext_resource type="Theme" uid="uid://sbrhwfe6lcck" path="res://UI.tres" id="2_bml30"]
+
+[node name="Volume" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gm22o")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23256889, 0.4036898, 0.67141867, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 257.0
+offset_top = -337.0
+offset_right = -338.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="Music Volume" type="HSlider" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_bml30")
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="SF Volume" type="HSlider" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_bml30")
+
+[connection signal="changed" from="ColorRect/VBoxContainer/Music Volume" to="." method="_on_music_volume_changed"]
+[connection signal="changed" from="ColorRect/VBoxContainer/SF Volume" to="." method="_on_sf_volume_changed"]

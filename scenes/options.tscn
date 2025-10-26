@@ -60,12 +60,12 @@ theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 125
 text = "Credits"
 
-[node name="Direction" type="Button" parent="VBoxContainer2/VBoxContainer"]
+[node name="Volume" type="Button" parent="VBoxContainer2/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_yjkok")
 theme_override_font_sizes/font_size = 125
-text = "Directions"
+text = "Volumes"
 
 [node name="Menu" type="Button" parent="VBoxContainer2/VBoxContainer"]
 layout_mode = 2
@@ -113,5 +113,5 @@ position = Vector2(484, 905)
 texture = ExtResource("9_gyu1t")
 
 [connection signal="pressed" from="VBoxContainer2/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="VBoxContainer2/VBoxContainer/Direction" to="." method="_on_direction_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/Volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="VBoxContainer2/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
