@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://brndfhwmrpgui"
+path="res://.godot/imported/clock.dialogue-11b3009a9439a661e71e076986210c90.tres"
+
+[deps]
+
+source_file="res://dialogue/clock.dialogue"
+dest_files=["res://.godot/imported/clock.dialogue-11b3009a9439a661e71e076986210c90.tres"]
+
+[params]
+
+defaults=true

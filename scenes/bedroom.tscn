@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://mq30hk0u3tp0"]
+[gd_scene load_steps=43 format=3 uid="uid://mq30hk0u3tp0"]
 
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
@@ -27,6 +27,10 @@
 [ext_resource type="Resource" uid="uid://bq3xb00pvroaf" path="res://dialogue/cauldron.dialogue" id="22_0wemr"]
 [ext_resource type="Texture2D" uid="uid://bgo8qxtbxsf85" path="res://Images/Crack.png" id="22_lwmpn"]
 [ext_resource type="Texture2D" uid="uid://dwx6438kcyveb" path="res://Images/Bed.png" id="24_6lafe"]
+[ext_resource type="Texture2D" uid="uid://dw1kna5i3bsp1" path="res://Images/Clock.png" id="28_lwmpn"]
+[ext_resource type="Resource" uid="uid://brndfhwmrpgui" path="res://dialogue/clock.dialogue" id="29_6lafe"]
+[ext_resource type="Texture2D" uid="uid://nlfkuemffveo" path="res://Images/poster.png" id="30_bwacq"]
+[ext_resource type="Resource" uid="uid://cihrcq6a7q2s5" path="res://dialogue/poster.dialogue" id="31_sphvx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmp1"]
 size = Vector2(120.616196, 94)
@@ -55,6 +59,12 @@ size = Vector2(311.99994, 196.29126)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl7to"]
 size = Vector2(114.71648, 93)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15if8"]
+size = Vector2(730.9914, 716.77026)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3yip"]
+size = Vector2(426.09406, 231.82703)
+
 [node name="Bedroom" type="Node2D"]
 script = ExtResource("1_u8wxw")
 
@@ -68,10 +78,10 @@ texture = ExtResource("1_cs7aj")
 [node name="UI" parent="Background" instance=ExtResource("2_43jao")]
 unique_name_in_owner = true
 anchors_preset = -1
-offset_left = -960.0
-offset_top = -540.0
-offset_right = -960.0
-offset_bottom = -540.0
+offset_left = -931.0
+offset_top = -527.0
+offset_right = -931.0
+offset_bottom = -527.0
 
 [node name="Shelf2" type="Sprite2D" parent="."]
 position = Vector2(239, 324)
@@ -202,6 +212,39 @@ item_name = "Cauldron"
 position = Vector2(7.867676, 43)
 shape = SubResource("RectangleShape2D_tl7to")
 
+[node name="Clock" parent="." instance=ExtResource("1_2f21x")]
+position = Vector2(1666, 167)
+rotation = -0.863938
+scale = Vector2(0.07795829, 0.07974998)
+skew = 0.34906584
+texture = ExtResource("28_lwmpn")
+dialogue = ExtResource("29_6lafe")
+item_name = "Cauldron"
+
+[node name="StaticBody2D" parent="Clock" index="0"]
+position = Vector2(292.03543, -318)
+
+[node name="CollisionShape2D" parent="Clock/StaticBody2D" index="0"]
+position = Vector2(-756.65515, 603.8612)
+scale = Vector2(6.000001, 6.0000005)
+shape = SubResource("RectangleShape2D_15if8")
+
+[node name="Poster" parent="." instance=ExtResource("1_2f21x")]
+position = Vector2(1677.0001, 463.00006)
+rotation = 0.4834562
+scale = Vector2(0.24294227, 0.3462222)
+skew = -0.5550147
+texture = ExtResource("30_bwacq")
+dialogue = ExtResource("31_sphvx")
+item_name = "Cauldron"
+
+[node name="StaticBody2D" parent="Poster" index="0"]
+position = Vector2(292.03543, -318)
+
+[node name="CollisionShape2D" parent="Poster/StaticBody2D" index="0"]
+position = Vector2(-8219.131, 6103.083)
+shape = SubResource("RectangleShape2D_u3yip")
+
 [editable path="Surfboard"]
 [editable path="Book"]
 [editable path="Trophy"]
@@ -213,3 +256,5 @@ shape = SubResource("RectangleShape2D_tl7to")
 [editable path="WallCrack"]
 [editable path="Mattress"]
 [editable path="Cauldron"]
+[editable path="Clock"]
+[editable path="Poster"]
