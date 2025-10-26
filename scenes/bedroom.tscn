@@ -3,7 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_u8wxw"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://tgxyfnyujrbm" path="res://UI.tscn" id="2_43jao"]
+=======
+[ext_resource type="PackedScene" uid="uid://bgsuauel8r4k5" path="res://UI.tscn" id="2_43jao"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://xdan3j7qvc3r" path="res://Images/Surfboard.png" id="2_mkmp1"]
 [ext_resource type="Texture2D" uid="uid://ybn0bwbkwd1y" path="res://Images/CrystalBook.png" id="3_7lolw"]
 [ext_resource type="Texture2D" uid="uid://dug0uu60b261y" path="res://Images/Shelf2.png" id="4_lyvny"]
@@ -242,8 +246,12 @@ item_name = "Cauldron"
 position = Vector2(292.03543, -318)
 
 [node name="CollisionShape2D" parent="Poster/StaticBody2D" index="0"]
+<<<<<<< Updated upstream
 position = Vector2(-551.2051, 643.55615)
 scale = Vector2(6.0000014, 6.0000005)
+=======
+position = Vector2(-632.38086, 651.79736)
+>>>>>>> Stashed changes
 shape = SubResource("RectangleShape2D_u3yip")
 
 [editable path="Surfboard"]
