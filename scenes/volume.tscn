@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c70w1jc1irxfr"]
+[gd_scene load_steps=4 format=3 uid="uid://bmml3aupanys7"]
 
 [ext_resource type="Script" uid="uid://bmt7xn7qidkv7" path="res://scenes/volume.gd" id="1_gm22o"]
-[ext_resource type="Theme" uid="uid://sbrhwfe6lcck" path="res://UI.tres" id="2_bml30"]
+[ext_resource type="Theme" uid="uid://gsdj5yospekk" path="res://UI.tres" id="2_bml30"]
+[ext_resource type="FontFile" uid="uid://bh4qluvrxpfm3" path="res://fonts/Horror Creepy.otf" id="3_wvjlw"]
 
 [node name="Volume" type="Control"]
 layout_mode = 3
@@ -19,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.23256889, 0.4036898, 0.67141867, 1)
+color = Color(0.37254903, 0.05490196, 0.2509804, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
 layout_mode = 1
@@ -38,20 +39,33 @@ alignment = 1
 
 [node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 125
 text = "Music Volume"
 
 [node name="Music Volume" type="HSlider" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_bml30")
+max_value = 1.0
+step = 0.1
 
 [node name="Label2" type="Label" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 125
 text = "SFX Volume"
 
 [node name="SF Volume" type="HSlider" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_bml30")
+max_value = 1.0
+step = 0.1
 
-[connection signal="changed" from="ColorRect/VBoxContainer/Music Volume" to="." method="_on_music_volume_changed"]
-[connection signal="changed" from="ColorRect/VBoxContainer/SF Volume" to="." method="_on_sf_volume_changed"]
+[node name="Menu" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wvjlw")
+theme_override_font_sizes/font_size = 109
+text = "Back"
+
+[connection signal="drag_ended" from="ColorRect/VBoxContainer/Music Volume" to="." method="_on_music_volume_changed"]
+[connection signal="drag_ended" from="ColorRect/VBoxContainer/SF Volume" to="." method="_on_sf_volume_changed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Menu" to="." method="_on_options_pressed"]
