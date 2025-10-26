@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cdux58t18v1hu" path="res://interaction components/ITEM.tscn" id="1_2f21x"]
 [ext_resource type="Texture2D" uid="uid://bovexyf74qsh0" path="res://Images/Background.png" id="1_cs7aj"]
 [ext_resource type="Script" uid="uid://caep28jgy74td" path="res://global/global.gd" id="1_u8wxw"]
-[ext_resource type="PackedScene" path="res://UI.tscn" id="2_43jao"]
+[ext_resource type="PackedScene" uid="uid://tgxyfnyujrbm" path="res://UI.tscn" id="2_43jao"]
 [ext_resource type="Texture2D" uid="uid://xdan3j7qvc3r" path="res://Images/Surfboard.png" id="2_mkmp1"]
 [ext_resource type="Texture2D" uid="uid://ybn0bwbkwd1y" path="res://Images/CrystalBook.png" id="3_7lolw"]
 [ext_resource type="Texture2D" uid="uid://dug0uu60b261y" path="res://Images/Shelf2.png" id="4_lyvny"]
@@ -63,7 +63,7 @@ size = Vector2(114.71648, 93)
 size = Vector2(730.9914, 716.77026)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3yip"]
-size = Vector2(426.09406, 231.82703)
+size = Vector2(374.6087, 205.04507)
 
 [node name="Bedroom" type="Node2D"]
 script = ExtResource("1_u8wxw")
@@ -78,10 +78,10 @@ texture = ExtResource("1_cs7aj")
 [node name="UI" parent="Background" instance=ExtResource("2_43jao")]
 unique_name_in_owner = true
 anchors_preset = -1
-offset_left = -931.0
-offset_top = -527.0
-offset_right = -931.0
-offset_bottom = -527.0
+offset_left = -945.0
+offset_top = -542.0
+offset_right = -963.0
+offset_bottom = -550.0
 
 [node name="Shelf2" type="Sprite2D" parent="."]
 position = Vector2(239, 324)
@@ -230,9 +230,9 @@ scale = Vector2(6.000001, 6.0000005)
 shape = SubResource("RectangleShape2D_15if8")
 
 [node name="Poster" parent="." instance=ExtResource("1_2f21x")]
-position = Vector2(1677.0001, 463.00006)
+position = Vector2(1664.979, 457.36514)
 rotation = 0.4834562
-scale = Vector2(0.24294227, 0.3462222)
+scale = Vector2(0.22119744, 0.3483128)
 skew = -0.5550147
 texture = ExtResource("30_bwacq")
 dialogue = ExtResource("31_sphvx")
@@ -242,7 +242,8 @@ item_name = "Cauldron"
 position = Vector2(292.03543, -318)
 
 [node name="CollisionShape2D" parent="Poster/StaticBody2D" index="0"]
-position = Vector2(-8219.131, 6103.083)
+position = Vector2(-551.2051, 643.55615)
+scale = Vector2(6.0000014, 6.0000005)
 shape = SubResource("RectangleShape2D_u3yip")
 
 [editable path="Surfboard"]
