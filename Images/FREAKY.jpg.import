@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvjw646f7h3gp"
-path="res://.godot/imported/FREAKY.jpg-7ecd6e1d45807aeeb1801cd383cfb663.ctex"
+uid="uid://berjnq7feah0v"
+path="res://.godot/imported/FREAKY.jpg-d9edde208bfc0b599d83044570fdcb62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FREAKY.jpg"
-dest_files=["res://.godot/imported/FREAKY.jpg-7ecd6e1d45807aeeb1801cd383cfb663.ctex"]
+source_file="res://Images/FREAKY.jpg"
+dest_files=["res://.godot/imported/FREAKY.jpg-d9edde208bfc0b599d83044570fdcb62.ctex"]
 
 [params]
 
