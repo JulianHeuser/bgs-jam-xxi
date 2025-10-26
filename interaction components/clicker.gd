@@ -10,7 +10,6 @@ var interactable = true
 @onready var already_selected: DialogueResource = preload("res://dialogue/already_selected.dialogue")
 
 static var selected_items : Array[String]
-static var num_of_items : int = 0
 
 func _ready() -> void:
 	selected_items.resize(3)
@@ -25,6 +24,8 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and interactable:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if is_pixel_opaque(get_local_mouse_position()):
+				if $AudioStreamPlayer.stream != null:
+					$AudioStreamPlayer.play()
 				DialogueManager.show_dialogue_balloon(dialogue,"start", [self])
 				await DialogueManager.dialogue_ended
 				if item_name not in selected_items:
@@ -33,23 +34,24 @@ func _input(event: InputEvent) -> void:
 					DialogueManager.show_dialogue_balloon(already_selected,"start", [self])
 					
 				
+# Type :
+# 0 = means (Red Crystal)
+# 1 = motive (Trophy)
+# 2 = weapon (Surfboard)
 
-func add_item_to_clues() -> void:
+func add_item_to_clues(type : int = 0) -> void:
 	if item_name in selected_items:
 		# Item already selected
 		return
-	selected_items[num_of_items] = item_name
-	UI.set_texture(num_of_items, texture)
+	selected_items[type] = item_name
+	UI.set_texture(type, texture)
 	
-	num_of_items += 1
-	
-	if num_of_items == 3:
+	if selected_items[0] != "" and selected_items[1] != "" and selected_items[2] != "":
 		print("Wow you did it awesome")
-		if "SurfBoard" in selected_items and \
-			"Trophy" in selected_items and \
-			"Red Crystal" in selected_items:
+		if "Red Crystal" == selected_items[0] and \
+			"Trophy" == selected_items[1] and \
+			"SurfBoard" == selected_items[2]:
 				get_tree().change_scene_to_file("res://scenes/win.tscn")
 		else: get_tree().change_scene_to_file("res://scenes/lose.tscn")
 		
 		selected_items = ["", "", ""]
-		num_of_items = 0

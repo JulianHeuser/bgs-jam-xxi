@@ -42,9 +42,9 @@
 [ext_resource type="AudioStream" uid="uid://bpnv54mi2fqtf" path="res://sounds/bed.wav" id="33_styym"]
 [ext_resource type="AudioStream" uid="uid://dkfhp4g7xbksi" path="res://sounds/bgs_loop.ogg" id="40_7uc5s"]
 [ext_resource type="Texture2D" uid="uid://c6jyvsyjkf8ih" path="res://Images/Trashcan.png" id="40_iuwyb"]
-[ext_resource type="Script" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
+[ext_resource type="Script" uid="uid://d3c1c8tm47gqp" path="res://scripts/musicmanager.gd" id="41_3eg4m"]
 [ext_resource type="Resource" uid="uid://ccdynrhx050dt" path="res://dialogue/trash.dialogue" id="41_yv0u1"]
-[ext_resource type="Script" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
+[ext_resource type="Script" uid="uid://ck1ycnymgw10" path="res://scripts/intro_dialogue_Start.gd" id="45_wltlc"]
 
 [node name="Bedroom" type="Node2D"]
 script = ExtResource("1_u8wxw")
